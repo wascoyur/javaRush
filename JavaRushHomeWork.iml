@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/src/com/javarush/test/level17/lesson10/home02" />
+      <excludeFolder url="file://$MODULE_DIR$/src/com/javarush/test/level17/lesson10/home03" />
+      <excludeFolder url="file://$MODULE_DIR$/src/com/javarush/test/level17/lesson10/home06/TMP" />
+      <excludeFolder url="file://$MODULE_DIR$/src/com/javarush/test/level18/lesson08/task04" />
+      <excludeFolder url="file://$MODULE_DIR$/src/com/javarush/test/level19/Patterns" />
+      <excludeFolder url="file://$MODULE_DIR$/src/com/javarush/test/level19/tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/src/com/javarush/test/level21/lesson08/task02" />
+      <excludeFolder url="file://$MODULE_DIR$/src/com/javarush/test/level23/lesson04/home01" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
