@@ -19,7 +19,7 @@ public class Solution {
         fis.read(syrec); fis.close();
         String[] slova = new String(syrec, "cp1251").split("\n");
         String[] ready = new String[0] ;
-        ready.
+
         for (String line : slova) {
             ready = line.split(" ");
         }
