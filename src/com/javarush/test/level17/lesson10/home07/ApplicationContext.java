@@ -26,4 +26,13 @@ public abstract class ApplicationContext<GenericsBean extends Bean> {
     }
 
     protected abstract void parseAllClassesAndInterfaces();
+
+    public static void main(String[] args) {
+        ApplicationContext tmp = new ApplicationContext() {
+            @Override
+            protected void parseAllClassesAndInterfaces() {
+
+            }
+        };
+    }
 }
