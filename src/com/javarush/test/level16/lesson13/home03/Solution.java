@@ -36,8 +36,15 @@ public class Solution {
         @Override
         public void run() {
             for (int i = 0; i <= countCreatedThreads; i++) {
-                start();
-                System.out.println(currentThread());
+                try {
+                    GenerateThread net = new GenerateThread();
+
+                    System.out.println(net);
+                    join();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+
             }
         }
 
