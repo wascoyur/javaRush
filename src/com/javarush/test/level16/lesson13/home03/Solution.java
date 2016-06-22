@@ -22,7 +22,7 @@ public class Solution {
     static volatile int countCreatedThreads ;
 
     public static void main(String[] args) throws InterruptedException {
-        System.out.println(new GenerateThread());
+        System.out.println(new GenerateThread());//Печать должна быть здесь, т.е. остальной код только формирует данные, не печатает.
     }
 
     public static class GenerateThread extends Thread{
@@ -38,8 +38,6 @@ public class Solution {
             for (int i = 0; i <= countCreatedThreads; i++) {
                 try {
                     GenerateThread net = new GenerateThread();
-
-                    System.out.println(net);
                     join();
                 } catch (InterruptedException e) {
                     e.printStackTrace();
