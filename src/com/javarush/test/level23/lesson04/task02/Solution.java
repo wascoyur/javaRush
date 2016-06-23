@@ -1,8 +1,8 @@
 package com.javarush.test.level23.lesson04.task02;
 
 /* Inner 2
-В классе SuperUser метод getDescription должен учитывать страну и город, т.е.
- возвращать результат аналогичный следующему:
+В классе SuperUser метод getDescription должен учитывать страну и город, т.е. возвращать результат
+аналогичный следующему:
 My name is George. I'm from the USA, Seattle.
 Используйте возможности иннер класса.
 */

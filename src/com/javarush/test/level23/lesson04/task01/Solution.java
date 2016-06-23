@@ -1,8 +1,7 @@
 package com.javarush.test.level23.lesson04.task01;
 
 /* Inner
-Реализовать метод getTwoSolutions,
-который должен возвращать массив из 2-х экземпляров класса Solution.
+Реализовать метод getTwoSolutions, который должен возвращать массив из 2-х экземпляров класса Solution.
 Для каждого экземпляра класса Solution инициализировать поле innerClasses двумя значениями.
 Инициализация всех данных должна происходить только в методе getTwoSolutions.
 */
@@ -13,9 +12,14 @@ public class Solution {
     }
 
     public static Solution[] getTwoSolutions() {
-        Solution a = new Solution();
-        Solution b = new Solution();
+        Solution[] mass = new Solution[2];
+        Solution sol1 = new Solution();
 
-        return null;
+        Solution sol2 = new Solution();
+        return mass;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(getTwoSolutions());
     }
 }
