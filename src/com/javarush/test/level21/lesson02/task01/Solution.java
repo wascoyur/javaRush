@@ -1,5 +1,7 @@
 package com.javarush.test.level21.lesson02.task01;
 
+import java.util.Arrays;
+
 /* Определяем адрес сети
 1) Даны IP-адрес и маска подсети, необходимо вычислить адрес сети - метод getNetAddress.
 Используйте операцию поразрядной конъюнкции (логическое И).
@@ -18,17 +20,25 @@ public class Solution {
         print(ip);          //11000000 10101000 00000001 00000010
         print(mask);        //11111111 11111111 11111110 00000000
         print(netAddress);  //11000000 10101000 00000000 00000000
+        System.out.println("");
+        print(ip);
+        print(mask);
+
     }
 
     public static byte[] getNetAddress(byte[] ip, byte[] mask) {
-        byte[] tmp = {0,0,0,0};
-        for (int i = 0; i < ip.length; i++) {
-            tmp[i] = (byte) (ip[i] ^ mask[i]);
+        byte[] net = new byte[3];
+        for (int i = 0; i < 3; i++) {
+            net[i] = (byte) (ip[i] & mask[i]);
+            System.out.println(net[]);
         }
-        System.out.println(tmp);
-        return new byte[4];
+        return net;
     }
 
     public static void print(byte[] bytes) {
+        for (int i = 0; i < 3; i++) {
+            System.out.print(Arrays.toString(bytes) + " . ");
+        }
+
     }
 }
