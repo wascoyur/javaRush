@@ -19,36 +19,28 @@ package com.javarush.test.level16.lesson13.home03;
 
 public class Solution {
     static int count = 15;
-    static volatile int countCreatedThreads ;
+    static volatile int countCreatedThreads;
 
     public static void main(String[] args) throws InterruptedException {
-        System.out.println(new GenerateThread());//Печать должна быть здесь, т.е. остальной код только формирует данные, не печатает.
+        System.out.println(new GenerateThread());
     }
 
     public static class GenerateThread extends Thread{
 
-
-        public GenerateThread() throws InterruptedException {
-            super(String.valueOf(++countCreatedThreads));
+        public GenerateThread()  {
+            super(String.valueOf(++countCreatedThreads));//
             start();
-
         }
         @Override
+         public String toString() {
+            return  "[" + getName()+ " created]";
+        }
         public void run() {
-            for (int i = 0; i <= countCreatedThreads; i++) {
-                try {
-                    GenerateThread net = new GenerateThread();
-                    join();
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-
+            while (countCreatedThreads < Solution.count){
+                System.out.println(new GenerateThread());
             }
         }
 
-        @Override
-        public String toString() {
-            return  getName()+ " created";
-        }
+
     }
 }
