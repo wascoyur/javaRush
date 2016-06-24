@@ -15,30 +15,44 @@ public class Solution {
         this.last = last;
     }
 
-    @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (!(o instanceof Solution))
+            return false;
+        Solution n = (Solution) o;
 
-        Solution solution = (Solution) o;
-
-        if (!first.equals(solution.first)) return false;
-        if (!last.equals(solution.last)) return false;
-
-        return true;
+        if (n.last != null && n.first!=null) {
+            return n.first.equals(first) && n.last.equals(last);
+        }
+        if ((n.first == null && this.first==null) && n.last.equals(last)){
+            return true;
+        }
+        if ((n.last == null && this.last == null)&& (n.first.equals(first) )){
+            return true;
+        }
+        return false;
     }
 
-    @Override
     public int hashCode() {
-        int result = 17;
-         result = first.hashCode();
-        result = 33 * result + last.hashCode();
+        int result;
+        int a = 0;
+        int b = 0;
+
+        if (first != null){
+            a = first.hashCode();
+        }
+        if (last != null) {
+            b = last.hashCode();
+        }
+
+        result = 17 * a * b;
         return result;
     }
 
     public static void main(String[] args) {
         Set<Solution> s = new HashSet<>();
-        s.add(new Solution("Mickey", "Mouse"));
-        System.out.println(s.contains(new Solution("Mickey", "Mouse")));
+        s.add(new Solution(null, null));
+        System.out.println(s.contains(new Solution(null, null)));
+//        System.out.println(new Solution("Mickey", null).equals(new Solution(null, null)));
+
     }
 }
