@@ -30,7 +30,7 @@ public class Solution {
         byte[] net = new byte[3];
         for (int i = 0; i < 3; i++) {
             net[i] = (byte) (ip[i] & mask[i]);
-            System.out.println(net[]);
+            System.out.println(net[i]);
         }
         return net;
     }
