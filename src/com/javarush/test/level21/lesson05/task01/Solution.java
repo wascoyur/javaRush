@@ -20,12 +20,22 @@ public class Solution {
     }
 
     public int hashCode() {
-        return 31 * first.hashCode() + last.hashCode();
+        int result = 19;
+        int a =0;
+        int b = 0;
+        try {
+            return 31 * first.hashCode() * last.hashCode();
+        } catch (NullPointerException e) {
+            return result;
+        }
+
     }
 
     public static void main(String[] args) {
         Set<Solution> s = new HashSet<>();
         s.add(new Solution("Donald", "Duck"));
-        System.out.println(s.contains(new Solution("Donald", "Duck")));
+        Solution sol2 = new Solution("Donald", "Duck");
+        System.out.println(s.contains(sol2));
+        //ystem.out.println(s.contains(new Solution("Donald", "Duck")));
     }
 }
