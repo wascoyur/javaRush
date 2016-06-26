@@ -15,8 +15,19 @@ public class Solution {
         this.last = last;
     }
 
-    public boolean equals(Solution n) {
-        return n.first.equals(first) && n.last.equals(last);
+    public boolean equals(Object n) {
+        if (!(n instanceof Solution)) {
+            return false;
+        }
+        Solution s = (Solution) n;
+        try {
+            return s.first.equals(first) && s.last.equals(last);
+        } catch (NullPointerException e) {
+            if ((this.first == s.first) && (this.last == s.last)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public int hashCode() {
@@ -33,9 +44,8 @@ public class Solution {
 
     public static void main(String[] args) {
         Set<Solution> s = new HashSet<>();
-        s.add(new Solution("Donald", "Duck"));
-        Solution sol2 = new Solution("Donald", "Duck");
+        s.add(new Solution("", null));
+        Solution sol2 = new Solution("", null);
         System.out.println(s.contains(sol2));
-        //ystem.out.println(s.contains(new Solution("Donald", "Duck")));
     }
 }
