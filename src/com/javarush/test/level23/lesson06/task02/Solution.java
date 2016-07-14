@@ -1,10 +1,15 @@
 package com.javarush.test.level23.lesson06.task02;
 
 /* Рефакторинг
-Отрефакторите класс Solution: вынесите все константы в public вложенный(nested) класс Constants.
+Отрефакторите класс Solution: вынесите все константы
+в public вложенный(nested) класс Constants.
 Запретите наследоваться от Constants.
 */
 public class Solution {
+
+    final public static class Constants{
+        String s ;
+    }
 
     public class ServerNotAccessibleException extends Exception {
         public ServerNotAccessibleException() {
@@ -45,4 +50,6 @@ public class Solution {
             super("Access is denied.", cause);
         }
     }
+
+
 }
