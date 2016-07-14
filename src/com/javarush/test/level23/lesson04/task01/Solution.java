@@ -15,15 +15,23 @@ public class Solution {
     }
 
     public static Solution[] getTwoSolutions() {
-//        Solution[] mass = new Solution[2];
+        Solution[] mass = new Solution[2];
         Solution sol1 = new Solution();
-        Solution.InnerClass innerClass;
+        Solution sol2 = new Solution();
+        InnerClass innerClass = sol1.new InnerClass();
+        InnerClass inner2Class = sol1.new InnerClass();
+        InnerClass innerClass2 = sol1.new InnerClass();
+        InnerClass inner2Class2 = sol1.new InnerClass();
 
-        return null;
+        mass[0] = sol1;
+        mass[1] = sol2;
+        return mass;
     }
 
     public static void main(String[] args) {
         getTwoSolutions();
+        System.out.println(getTwoSolutions());
+
 
     }
 }
