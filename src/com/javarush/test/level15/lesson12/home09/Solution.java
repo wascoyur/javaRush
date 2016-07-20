@@ -22,9 +22,23 @@ obj name
 double 3.14
 */
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class Solution {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         //add your code here
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        String s = "http://javarush.ru/alpha/index.html?lvl=15&view&name=Amigo";//bufferedReader.readLine();
+        s = s.substring(s.indexOf("?")+1);
+        String[] str = s.split("&");
+        System.out.println(str);
+        Pattern pattern = Pattern.compile("a-z");
+        Matcher matcher = pattern.matcher(s);
+        System.out.println(matcher.matches());
     }
 
     public static void alert(double value) {
