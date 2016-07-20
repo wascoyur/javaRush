@@ -24,5 +24,6 @@ package com.javarush.test.level19.lesson10.home01;
 
 public class Solution {
     public static void main(String[] args) {
+
     }
 }

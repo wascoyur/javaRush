@@ -76,4 +76,9 @@ public class Solution {
 
         String getPhoneNumber();        //example +38(050)123-45-67
     }
+
+    public static void main(String[] args) {
+        Solution sol = new Solution();
+
+    }
 }

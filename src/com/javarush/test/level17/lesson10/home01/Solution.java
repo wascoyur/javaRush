@@ -11,5 +11,4 @@ import java.util.*;
 
 public class Solution {
     private ArrayList<Long> original = new ArrayList<Long>();
-
 }
