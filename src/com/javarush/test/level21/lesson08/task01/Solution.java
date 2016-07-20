@@ -16,7 +16,7 @@ import java.util.Map;
 public class Solution {
 
     @Override
-    private Solution clone() throws CloneNotSupportedException, IOException, ClassNotFoundException {
+    private Solution clone() throws CloneNotSupportedException, IOException {
 
         ByteArrayOutputStream writeBuffer = new ByteArrayOutputStream();
         ObjectOutputStream outputStream = new ObjectOutputStream(writeBuffer);
