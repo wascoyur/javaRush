@@ -6,6 +6,9 @@ package com.javarush.test.level23.lesson06.task02;
 Запретите наследоваться от Constants.
 */
 public class Solution {
+    public static class Constants{
+
+    }
 
     final public static class Constants{
         String s ;
