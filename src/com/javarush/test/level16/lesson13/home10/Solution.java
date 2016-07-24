@@ -21,46 +21,19 @@ public class Solution {
     public static String firstFileName;
     public static String secondFileName;
     static {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        try {
-            String firstFileName = reader.readLine();
-            String secondFileName = reader.readLine();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//        BufferedReader rf1 = new BufferedReader(new InputStreamReader(System.in));
+//        try {
+//           firstFileName = rf1.readLine();
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+        firstFileName = "d:\\f1";
+        secondFileName = "d:\\f2";
     }
 
     public static void main(String[] args) throws InterruptedException {
         systemOutPrintln(firstFileName);
         systemOutPrintln(secondFileName);
-    }
-    public static class  ReadFileThread implements ReadFileInterface, Runnable {
-
-
-        @Override
-        public void setFileName(String fullFileName) {
-            File file = new File(firstFileName);
-        }
-
-        @Override
-        public String getFileContent() {
-            return null;
-        }
-
-        @Override
-        public void join() throws InterruptedException {
-
-        }
-
-        @Override
-        public void start() {
-
-        }
-
-        @Override
-        public void run() {
-
-        }
     }
 
     public static void systemOutPrintln(String fileName) throws InterruptedException {

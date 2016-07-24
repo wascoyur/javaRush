@@ -27,7 +27,6 @@ public class Field {
     }
     void print(){// - объект будет отрисовывать на экран свое текущее состояние;
         int height = 0; int width = 0;
-        if (matrix[y][x] == 0) {
 
         }
     }

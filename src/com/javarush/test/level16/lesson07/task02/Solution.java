@@ -21,22 +21,22 @@ public class Solution {
         //марш!
         ivanov.start();
         petrov.start();
-        Thread.sleep(2000); // пауза
+        Thread.sleep(2000);
         isStopped = true;
         Thread.sleep(1000);
     }
 
     public static class Stopwatch extends Thread {
         private Runner owner;
-        private int stepNumber;
+        private double stepNumber = 1;
 
-        public Stopwatch(Runner runner) { // создаем секундомер
+        public Stopwatch(Runner runner) {
             this.owner = runner;
         }
 
         public void run() {
             try {
-                while (!isStopped) { // пока в майн не сработал изСтоппед выполняем доСеверал
+                while (!isStopped) {
                     doSeveralSteps();
                 }
             } catch (InterruptedException e) {
@@ -44,10 +44,10 @@ public class Solution {
         }
 
         private void doSeveralSteps() throws InterruptedException {
-            stepNumber++; // делаем шаг
+            //stepNumber++;
             //add your code here - добавь код тут
-            System.out.println(owner.getName() + " делает шаг №" + stepNumber + "!"); //
-            System.out.println(owner.getName() + "speed = " + owner.getSpeed() + " Stopwach # " + Stopwatch.this);
+            stepNumber = stepNumber * owner.getSpeed();
+            System.out.println(owner.getName() + " делает шаг №" + stepNumber + "!");
         }
     }
 
@@ -56,22 +56,24 @@ public class Solution {
         private double speed;
         Stopwatch stopwatch;
 
-        public Runner(String name, double speed) { //создаем Руннер Иванов/Петров
-            this.name = name; // устанавливаем имя бегуна
-            this.speed = speed;// устанавливаем скорость бегуна
+        public Runner(String name, double speed) {
+            this.name = name;
+            this.speed = speed;
             this.stopwatch = new Stopwatch(this);
         }
 
         public String getName() {
+
             return name;
         }
 
         public double getSpeed() {
+
             return speed;
         }
 
         public void start() {
-            stopwatch.start(); // запуск секундомера
+            stopwatch.start();
         }
     }
 }
