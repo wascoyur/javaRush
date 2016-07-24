@@ -10,10 +10,10 @@ package com.javarush.test.level24.lesson02.home01;
 то выбросьте UnsupportedInterfaceMarkerException
 */
 public class Solution {
+    public class UnsupportedInterfaceMarkerException extends Exception{}
     public static void main(String[] args) throws UnsupportedInterfaceMarkerException {
         SelfInterfaceMarkerImpl obj = new SelfInterfaceMarkerImpl();
         Util.testClass(obj);
     }
-
 
 }
