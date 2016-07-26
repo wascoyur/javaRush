@@ -19,9 +19,10 @@ public class Solution {
         //на старт!
         //внимание!
         //марш!
+
         ivanov.start();
         petrov.start();
-        Thread.sleep(2000); // пауза
+        Thread.sleep(2000);
         isStopped = true;
         Thread.sleep(1000);
     }
@@ -30,13 +31,13 @@ public class Solution {
         private Runner owner;
         private int stepNumber;
 
-        public Stopwatch(Runner runner) { // создаем секундомер
+        public Stopwatch(Runner runner) {
             this.owner = runner;
         }
 
         public void run() {
             try {
-                while (!isStopped) { // пока в майн не сработал изСтоппед выполняем доСеверал
+                while (!isStopped) {
                     doSeveralSteps();
                 }
             } catch (InterruptedException e) {
@@ -44,10 +45,10 @@ public class Solution {
         }
 
         private void doSeveralSteps() throws InterruptedException {
-            stepNumber++; // делаем шаг
+            stepNumber++;
             //add your code here - добавь код тут
-            System.out.println(owner.getName() + " делает шаг №" + stepNumber + "!"); //
-            System.out.println(owner.getName() + "speed = " + owner.getSpeed() + " Stopwach # " + Stopwatch.this);
+
+            System.out.println(owner.getName() + " делает шаг №" + stepNumber + "!");
         }
     }
 
@@ -56,10 +57,10 @@ public class Solution {
         private double speed;
         Stopwatch stopwatch;
 
-        public Runner(String name, double speed) { //создаем Руннер Иванов/Петров
-            this.name = name; // устанавливаем имя бегуна
-            this.speed = speed;// устанавливаем скорость бегуна
-            this.stopwatch = new Stopwatch(this);
+        public Runner(String name, double speed) {
+            this.name = name;
+            this.speed = speed;
+            this.stopwatch = new Stopwatch(this);//
         }
 
         public String getName() {
@@ -67,11 +68,12 @@ public class Solution {
         }
 
         public double getSpeed() {
+
             return speed;
         }
 
         public void start() {
-            stopwatch.start(); // запуск секундомера
+            stopwatch.start();//запускается секундомер личный для бегуна
         }
     }
 }

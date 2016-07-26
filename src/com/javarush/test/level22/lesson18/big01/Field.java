@@ -11,7 +11,7 @@ public class Field {
     public Field(int width, int height, int[][] matrix) {
         this.width = width;
         this.height = height;
-        this.matrix = matrix;
+        this.matrix = new int[height][width];
     }
 
     public int getWidth() {
@@ -27,11 +27,12 @@ public class Field {
     }
     void print(){// - объект будет отрисовывать на экран свое текущее состояние;
         int height = 0; int width = 0;
-        if (matrix[y][x] == 0) {
 
-        }
+
     }
     void removeFullLines(){};// - будет удалять из матрицы полностью заполненные строки и сдвигать вышележащие строки вниз;
     Integer getValue(int x, int y){return null;}// - возвращает значение которое находится в матрице с координатами x и y;
     void setValue(int x, int y, int value){}// - устанавливает переданное значение в ячейку массива (матрицы
+
+
 }
