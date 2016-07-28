@@ -19,34 +19,36 @@ public class Beach implements Comparable{
         return name;
     }
 
-   synchronized public void setName(String name) {
-        this.name = name;
+    public void setName(String name) {
+        synchronized (this){
+            this.name = name;}
     }
 
     public float getDistance() {
         return distance;
     }
 
-   synchronized public void setDistance(float distance) {
-        this.distance = distance;
+    public void  setDistance(float distance) {
+        synchronized (this){
+        this.distance = distance;}
     }
 
     public int getQuality() {
         return quality;
     }
 
-    synchronized public void setQuality(int quality) {
-        this.quality = quality;
+    public void setQuality(int quality) {
+        synchronized (this) {
+            this.quality = quality;
+        }
     }
 
     @Override
-    synchronized public int compareTo(Object o) {
-        Beach tmp = (Beach) o;
-        if (this.quality < tmp.getQuality())return -1;
-        else
-        if (this.quality > tmp.getQuality())return 1;
-        else
-        return 0;
-    }
+    public synchronized int compareTo(Object o) {
+        Beach tmp = (Beach)o;
+        int distanceParam = (int) (this.distance - tmp.getDistance());
+        int qualityParam = this.quality - tmp.getQuality();
+        return 10000 * name.compareTo(tmp.getName()) + 100 * distanceParam + qualityParam;
 
+    }
 }

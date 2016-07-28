@@ -28,7 +28,7 @@ public class Solution {
 
     public static class Stopwatch extends Thread {
         private Runner owner;
-        private double stepNumber = 1;
+        private int stepNumber;
 
         public Stopwatch(Runner runner) {
             this.owner = runner;
@@ -44,9 +44,9 @@ public class Solution {
         }
 
         private void doSeveralSteps() throws InterruptedException {
-            //stepNumber++;
+            stepNumber++;
             //add your code here - добавь код тут
-            stepNumber = stepNumber * owner.getSpeed();
+
             System.out.println(owner.getName() + " делает шаг №" + stepNumber + "!");
         }
     }
@@ -63,12 +63,10 @@ public class Solution {
         }
 
         public String getName() {
-
             return name;
         }
 
         public double getSpeed() {
-
             return speed;
         }
 
