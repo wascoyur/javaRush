@@ -14,10 +14,8 @@ import java.util.List;
 1.4. Игроки играют независимо друг от друга.
 
 2. Реализуйте логику метода run так, чтобы для каждого игрока:
-2.1. За 1 секунду через равные интервалы времени выводились в консоль действия, описанные в steps.
- Количество выведенных действий должно равняться rating.
-2.2. Любой текст должен начинаться с фамилии игрока (метод getName()),
-потом следовать двоеточие, а затем сам текст. Пример: [Ivanov:Начало игры].
+2.1. За 1 секунду через равные интервалы времени выводились в консоль действия, описанные в steps. Количество выведенных действий должно равняться rating.
+2.2. Любой текст должен начинаться с фамилии игрока (метод getName()), потом следовать двоеточие, а затем сам текст. Пример: [Ivanov:Начало игры].
 2.3. Когда игрок выполнит все действия из steps, то он считается победителем. Выведите [getName() + ":победитель!"].
 2.4. Когда найден победитель, то игра останавливается, и остальные игроки считаются побежденными. Выведите для них [getName() + ":проиграл"].
 */
@@ -46,8 +44,8 @@ public class Solution {
 
         public void run() {
             gamer1.start();
-            gamer2.start();
-            gamer3.start();
+//            gamer2.start();
+//            gamer3.start();
 
             while (!isWinnerFound) {
             }
@@ -68,6 +66,20 @@ public class Solution {
         @Override
         public void run() {
             //Add your code here - добавь код тут
+            int perid = 1000/(Gamer.this.rating);//период выполнения одного хода
+            int rate = Gamer.this.rating;
+            for (int i = 0; i < OnlineGame.steps.size() && i <= rate  ; i++) {
+
+                System.out.println(Thread.currentThread().getName() + ": " + OnlineGame.steps.get(i));
+                try {
+                    sleep(perid);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+            System.out.println(Gamer.currentThread().getName() + " победитель!");
+            OnlineGame.isWinnerFound = true;
+
         }
     }
 }
