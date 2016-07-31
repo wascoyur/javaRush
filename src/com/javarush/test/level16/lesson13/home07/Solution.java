@@ -73,17 +73,19 @@ public class Solution {
         @Override
         public void run() {
             //Add your code here - добавь код тут
-
-            for (int i = 0; i < OnlineGame.steps.size(); i++){
-                System.out.println(Thread.currentThread().getName() + ": " + OnlineGame.steps.get(i));
-                try {
-                    sleep(333);
+            int rate = Math.round(1000/this.rating);
+            try {
+                for (int i = 0; i < OnlineGame.steps.size(); i++){
+                System.out.println(Thread.currentThread().getName() + ":" + OnlineGame.steps.get(i));
+                 sleep(rate);
+                    }
+                System.out.println(this.getName() + ":победитель!");
+                OnlineGame.isWinnerFound = true;
                 } catch (InterruptedException e) {
-                    e.printStackTrace();
+                    System.out.println(this.getName() + ":проиграл");
+
                 }
             }
-
-
-        }
+       }
     }
-}
+

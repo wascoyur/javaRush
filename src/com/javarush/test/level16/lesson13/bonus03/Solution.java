@@ -24,10 +24,12 @@ public class Solution {
         threadA.start();
         threadB.start();
 
+        threadA.setUncaughtExceptionHandler(handler);
+        threadB.setUncaughtExceptionHandler(handler);
+
         threadA.interrupt();
         threadB.interrupt();
     }
-
     public static class TestedThread extends Thread {
         public TestedThread(UncaughtExceptionHandler handler) {
             setUncaughtExceptionHandler(handler);
