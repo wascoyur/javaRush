@@ -9,8 +9,28 @@ package com.javarush.test.level18.lesson10.home02;
 4. Закрыть потоки. Не использовать try-with-resources
 */
 
+import java.io.*;
+import java.util.Arrays;
+
 public class Solution {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+//        FileInputStream fis = new FileInputStream(args[0]);
+//        FileOutputStream fos = new FileOutputStream(args[1]);
+        FileInputStream fis = new FileInputStream("\\f1");
+        FileOutputStream fos = new FileOutputStream("\\f2");
+        BufferedReader br = new BufferedReader(new InputStreamReader(fis));
+        char[] ch = new char[fis.available()];
+        StringBuilder str;
+        br.read(ch,0,fis.available());
+        int sign = ch.length;
+        System.out.println("sign = " + sign);
+        char[] preSpace = ((ch.toString()).replaceAll(" ","")).toCharArray();
+        int presLi = preSpace.length;// длина без пробелов
+        System.out.println(preSpace);
+        System.out.println("preSpace = " + presLi);
+        int space = sign - presLi;
+        System.out.println("space = " + space);
+        System.out.println(ch);
 
     }
 }
