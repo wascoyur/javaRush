@@ -10,27 +10,25 @@ package com.javarush.test.level18.lesson10.home02;
 */
 
 import java.io.*;
-import java.util.Arrays;
 
 public class Solution {
     public static void main(String[] args) throws IOException {
-//        FileInputStream fis = new FileInputStream(args[0]);
-//        FileOutputStream fos = new FileOutputStream(args[1]);
-        FileInputStream fis = new FileInputStream("\\f1");
-        FileOutputStream fos = new FileOutputStream("\\f2");
-        BufferedReader br = new BufferedReader(new InputStreamReader(fis));
-        char[] ch = new char[fis.available()];
-        StringBuilder str;
-        br.read(ch,0,fis.available());
-        int sign = ch.length;
-        System.out.println("sign = " + sign);
-        char[] preSpace = ((ch.toString()).replaceAll(" ","")).toCharArray();
-        int presLi = preSpace.length;// длина без пробелов
-        System.out.println(preSpace);
-        System.out.println("preSpace = " + presLi);
-        int space = sign - presLi;
-        System.out.println("space = " + space);
-        System.out.println(ch);
+        FileInputStream fos = new FileInputStream(args[0]);
+        BufferedReader br = new BufferedReader(new InputStreamReader(fos));
+        char[] chars = new char[fos.available()];
+        double space = 0;
+        double all = 0;
+        br.read(chars);
+
+        for (int i = 0;i< chars.length; i++) {
+            if (chars[i] == ' ')space++;
+            all++;
+        }
+        String str = new String(chars);
+        double d = space/all * 100;
+        System.out.printf("%.2f", d);
+        br.close();fos.close();
+
 
     }
 }

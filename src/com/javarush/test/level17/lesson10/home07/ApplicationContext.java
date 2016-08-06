@@ -17,22 +17,13 @@ public abstract class ApplicationContext<GenericsBean extends Bean> {
         parseAllClassesAndInterfaces();
     }
 
-    public GenericsBean getByName(String name) {
+    synchronized public GenericsBean getByName(String name) {
           return container.get(name);
     }
 
-    public GenericsBean removeByName(String name) {
+    synchronized public GenericsBean removeByName(String name) {
         return container.remove(name);
     }
 
     protected abstract void parseAllClassesAndInterfaces();
-
-    public static void main(String[] args) {
-        ApplicationContext tmp = new ApplicationContext() {
-            @Override
-            protected void parseAllClassesAndInterfaces() {
-
-            }
-        };
-    }
 }

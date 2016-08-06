@@ -17,15 +17,17 @@ import java.io.*;
 
 public class Solution {
     public static void main(String[] args) throws IOException {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        FileReader file = new FileReader(reader.readLine());
-        FileWriter fileWriter = new FileWriter(reader.readLine());
-        StringBuilder out = new StringBuilder();
-        while (file.ready()){
-            int tmp = file.read();
-            System.out.print((char)tmp);
-             out.append(tmp);
-            fileWriter.write(tmp);
+//        BufferedReader rfName = new BufferedReader(new InputStreamReader(System.in));
+//        String firsName = rfName.readLine();
+//        String secondName = rfName.readLine();
+        FileInputStream fis = new FileInputStream(args[0]);
+        FileReader fr = new FileReader((args[0]));
+        FileWriter fw = new FileWriter(args[1]);
+        String tmp = "";
+        char[] ch = new char[fis.available()] ;
+        fr.read(ch);
+//        tmp = (String.valueOf(ch)).replaceAll("");
+        System.out.println(ch);
         }
-    }
 }
+

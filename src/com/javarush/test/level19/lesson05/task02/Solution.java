@@ -11,23 +11,19 @@ import java.io.*;
 
 public class Solution {
     public static void main(String[] args) throws IOException {
-        String seaWord = "world";
-        int count = 0;
-        String fName = new BufferedReader(new InputStreamReader(System.in)).readLine();
-        FileInputStream fis = new FileInputStream(new File(fName));
-        byte[] syrec = new byte[fis.available()];
-        fis.read(syrec); fis.close();
-        String[] slova = new String(syrec, "cp1251").split("\n");
-        String[] ready = new String[0] ;
-
-        for (String line : slova) {
-            ready = line.split(" ");
+        BufferedReader gfn = new BufferedReader(new InputStreamReader(System.in));
+        String fName = gfn.readLine();
+        FileInputStream fis = new FileInputStream(fName);
+        FileReader fr = new FileReader(fName);
+        char[] ch = new char[fis.available()];
+        fr.read(ch);
+        int word = 0;
+        String preStr = (String.valueOf(ch)).replaceAll("\\p{Punct}"," ");
+        String[] str = preStr.split(" ");
+        for (int i = 0; i < str.length; i++) {
+            if (str[i].equals("world"))word++;
         }
-        for (String x : ready) {
-            if (x.equals(seaWord)) {
-                count++;
-            }
-        }
-        System.out.println(count);
+        System.out.println(word);
+        gfn.close();fis.close();
     }
 }
