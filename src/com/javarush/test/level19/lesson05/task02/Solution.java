@@ -18,12 +18,12 @@ public class Solution {
         char[] ch = new char[fis.available()];
         fr.read(ch);
         int word = 0;
-        String preStr = (String.valueOf(ch)).replaceAll("\\p{Punct}"," ");
+        String preStr = (String.valueOf(ch)).replaceAll("\\p{Punct},\\b"," ");
         String[] str = preStr.split(" ");
         for (int i = 0; i < str.length; i++) {
             if (str[i].equals("world"))word++;
         }
         System.out.println(word);
-        gfn.close();fis.close();
+        gfn.close();fis.close();fr.close();
     }
 }
