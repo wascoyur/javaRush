@@ -28,15 +28,13 @@ public class Solution {
             Human somePerson = new Human();
             somePerson.load(inputStream);
             //check here that ivanov equals to somePerson - проверьте тут, что ivanov и somePerson равны
-
-
             inputStream.close();
 
         } catch (IOException e) {
-            e.printStackTrace();
+            //e.printStackTrace();
             System.out.println("Oops, something wrong with my file");
         } catch (Exception e) {
-            e.printStackTrace();
+            //e.printStackTrace();
             System.out.println("Oops, something wrong with save/load method");
         }
     }
@@ -58,27 +56,10 @@ public class Solution {
 
         public void save(OutputStream outputStream) throws Exception {
             //implement this method - реализуйте этот метод
-            if (name!=null) {
-                PrintWriter save = new PrintWriter(outputStream);
-                save.println();
-                save.println(assets.size());
-                for (int i = 0; i < assets.size(); i++) {
-                    save.println(assets.get(i));
-                }
-                save.flush();
-
-            }
         }
 
         public void load(InputStream inputStream) throws Exception {
             //implement this method - реализуйте этот метод
-            BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
-            name =  reader.readLine();
-            int asSize = Integer.parseInt(reader.readLine());
-            for (int i = 0; i < asSize; i++) {
-                assets.add(new Asset(reader.readLine()));
-            }
-
         }
     }
 }
