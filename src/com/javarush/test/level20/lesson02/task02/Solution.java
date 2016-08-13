@@ -20,7 +20,6 @@ public class Solution {
 
             JavaRush javaRush = new JavaRush();
             //initialize users field for the javaRush object here - инициализируйте поле users для объекта javaRush тут
-            javaRush.users = (List<User>) new User();
             javaRush.save(outputStream);
             outputStream.flush();
 
@@ -45,13 +44,6 @@ public class Solution {
 
         public void save(OutputStream outputStream) throws Exception {
             //implement this method - реализуйте этот метод
-            PrintWriter writer = new PrintWriter(outputStream);
-            writer.println();
-//            private String isfirstName ;
-//            private String lastName;
-//            private Date birthDate;
-//            private boolean isMale;
-
         }
 
         public void load(InputStream inputStream) throws Exception {

@@ -9,10 +9,6 @@ public class User {
     private boolean isMale;
     private Country country;
 
-    public User() {
-
-    }
-
     public String getFirstName() {
         return firstName;
     }
