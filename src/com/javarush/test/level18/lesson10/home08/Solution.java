@@ -22,6 +22,7 @@ public class Solution {
     public static class ReadThread extends Thread {
         public ReadThread(String fileName) {
             //implement constructor body
+
         }
         // implement file reading here - реализуйте чтение из файла тут
     }

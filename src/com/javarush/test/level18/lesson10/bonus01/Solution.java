@@ -13,9 +13,20 @@ fileOutputName - имя файла, куда необходимо записат
 -d - ключ указывает, что необходимо расшифровать данные
 */
 
-public class Solution {
-    public static void main(String[] args) {
+import java.io.*;
 
+public class Solution {
+    public static void main(String[] args) throws IOException {
+        BufferedReader rFn = new BufferedReader(new FileReader(args[1]));
+        BufferedWriter wF = new BufferedWriter(new FileWriter(args[2]));
+
+        if (args[0] == "-e") {
+            char[] ch = new char[(int) (new File(args[1])).length()];
+            rFn.read(ch);
+//            ch = ch.
+            wF.write(ch);
+            wF.append(' ');
+        }
     }
 
 }
