@@ -11,7 +11,7 @@ import java.io.Serializable;
 */
 public class Solution {
     public static class A {
-        protected String name = "A";
+        public String name = "A";
 
         public A(String name) {
             this.name += name;
@@ -23,9 +23,5 @@ public class Solution {
             super(name);
             this.name += name;
         }
-    }
-
-    public static void main(String[] args) {
-
     }
 }

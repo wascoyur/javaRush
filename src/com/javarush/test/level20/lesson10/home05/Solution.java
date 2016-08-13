@@ -1,7 +1,6 @@
 package com.javarush.test.level20.lesson10.home05;
 
 import java.io.PrintStream;
-import java.io.Serializable;
 import java.util.logging.Logger;
 
 /* Сериализуйте Person
@@ -9,15 +8,15 @@ import java.util.logging.Logger;
 */
 public class Solution {
 
-    public static class Person implements Serializable {
+    public static class Person {
         String firstName;
         String lastName;
         String fullName;
         final String greetingString;
         String country;
         Sex sex;
-       PrintStream outputStream;
-        transient Logger logger;
+        PrintStream outputStream;
+        Logger logger;
 
         Person(String firstName, String lastName, String country, Sex sex) {
             this.firstName = firstName;

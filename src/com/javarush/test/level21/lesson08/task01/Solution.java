@@ -1,10 +1,6 @@
 package com.javarush.test.level21.lesson08.task01;
 
 import java.io.*;
-import java.lang.CloneNotSupportedException;
-import java.lang.Cloneable;
-import java.lang.Object;
-import java.lang.Override;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -15,29 +11,13 @@ import java.util.Map;
 */
 public class Solution {
 
-    @Override
-    private Solution clone() throws CloneNotSupportedException, IOException {
-
-        ByteArrayOutputStream writeBuffer = new ByteArrayOutputStream();
-        ObjectOutputStream outputStream = new ObjectOutputStream(writeBuffer);
-        outputStream.writeObject();
-        outputStream.close();
-
-        byte[] buffer = writeBuffer.toByteArray();
-        ByteArrayInputStream readBuffer = new ByteArrayInputStream(buffer);
-        ObjectInputStream inputStream = new ObjectInputStream(readBuffer);
-        Solution objectCopy = (Solution)inputStream.readObject();
-        return objectCopy;
-    }
-
-    public static void main(String[] args) throws IOException, ClassNotFoundException {
+    public static void main(String[] args) {
         Solution solution = new Solution();
         solution.users.put("Hubert", new User(172, "Hubert"));
         solution.users.put("Zapp", new User(41, "Zapp"));
         Solution clone = null;
         try {
             clone = solution.clone();
-
             System.out.println(solution);
             System.out.println(clone);
 
@@ -49,7 +29,6 @@ public class Solution {
         }
     }
 
-
     protected Map<String, User> users = new LinkedHashMap();
 
     public static class User {
@@ -60,5 +39,18 @@ public class Solution {
             this.age = age;
             this.name = name;
         }
+    }
+
+    @Override
+    protected Solution clone(Solution origin) throws CloneNotSupportedException {
+        ByteArrayOutputStream store = new ByteArrayOutputStream();
+        try {
+            ObjectOutputStream doSave = new ObjectOutputStream(store);
+            doSave.writeObject();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return cloneSol;
     }
 }
