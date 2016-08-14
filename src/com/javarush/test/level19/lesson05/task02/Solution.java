@@ -7,27 +7,28 @@ package com.javarush.test.level19.lesson05.task02;
 Закрыть потоки. Не использовать try-with-resources
 */
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Solution {
     public static void main(String[] args) throws IOException {
-        String seaWord = "world";
+        BufferedReader rfn = new BufferedReader(new InputStreamReader(System.in));
+        String fn = rfn.readLine();
+        BufferedReader rd = new BufferedReader(new FileReader(fn));
         int count = 0;
-        String fName = new BufferedReader(new InputStreamReader(System.in)).readLine();
-        FileInputStream fis = new FileInputStream(new File(fName));
-        byte[] syrec = new byte[fis.available()];
-        fis.read(syrec); fis.close();
-        String[] slova = new String(syrec, "cp1251").split("\n");
-        String[] ready = new String[0] ;
-
-        for (String line : slova) {
-            ready = line.split(" ");
-        }
-        for (String x : ready) {
-            if (x.equals(seaWord)) {
-                count++;
+        while (rd.ready()) {
+            String str = rd.readLine().replaceAll("\\p{Punct}"," ");
+            String[] s = str.split(" ");
+            for (String x : s) {
+                if (x.equals("world")) {
+                    count++;
+                }
             }
         }
         System.out.println(count);
+        rfn.close();
+        rd.close();
     }
 }

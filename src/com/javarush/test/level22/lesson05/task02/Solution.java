@@ -7,7 +7,8 @@ package com.javarush.test.level22.lesson05.task02;
 */
 public class Solution {
     public static String getPartOfString(String string) {
-        return String.format("");
+
+        return null;
     }
 
     public static class TooShortStringException extends Exception {

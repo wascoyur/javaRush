@@ -1,6 +1,9 @@
 package com.javarush.test.level20.lesson07.task05;
 
-import java.io.*;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
 
 /* Переопределение сериализации
 Сделайте так, чтобы после десериализации нить runner продолжила работать.
@@ -31,11 +34,9 @@ public class Solution implements Serializable, Runnable {
      */
     private void writeObject(ObjectOutputStream out) throws IOException {
         out.defaultWriteObject();
-
     }
 
     private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException {
         in.defaultReadObject();
-        runner.start();
     }
 }

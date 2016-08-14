@@ -1,5 +1,6 @@
 package com.javarush.test.level22.lesson09.task01;
 
+import java.io.*;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -19,12 +20,38 @@ import java.util.List;
 public class Solution {
     public static List<Pair> result = new LinkedList<>();
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new FileReader("d:\\f1"));
+        int sizeFile = (int)new File("d:\\f1").length();
+        char[] ch = new char[sizeFile];
+        br.read(ch, 0, sizeFile);
+        String s = String.valueOf(ch);
+        String[] words = s.split(" ");
+        String clear = words[words.length -1].toString().trim();
+        words[words.length - 1] = clear;
+        String[] cloneWord = new String[words.length];
+        cloneWord = words;
+        for (String x : words) {
+            StringBuilder reverse = new StringBuilder(x);
+            reverse = reverse.reverse();
+            for (int i = 0; i < cloneWord.length; i++) {
+                if (reverse.toString().equals(cloneWord[i])) {
+                    result.add(new Pair(x,cloneWord[i]));
+                    cloneWord[i] = null;
+                }
+            }
+        }
+        System.out.println(s);
     }
 
     public static class Pair {
         String first;
         String second;
+
+        public Pair(String x, String y) {
+            this.first = x;
+            this.second = y;
+        }
 
         @Override
         public String toString() {
