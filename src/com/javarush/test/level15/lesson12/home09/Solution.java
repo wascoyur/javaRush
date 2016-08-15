@@ -2,7 +2,8 @@ package com.javarush.test.level15.lesson12.home09;
 
 /* Парсер реквестов
 Считать с консоли URl ссылку.
-Вывести на экран через пробел список всех параметров (Параметры идут после ? и разделяются &, например, lvl=15).
+Вывести на экран через пробел список всех параметров (Параметры идут после ?
+и разделяются &, например, lvl=15).
 URL содержит минимум 1 параметр.
 Если присутствует параметр obj, то передать его значение в нужный метод alert.
 alert(double value) - для чисел (дробные числа разделяются точкой)
@@ -25,20 +26,40 @@ double 3.14
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 public class Solution {
     public static void main(String[] args) throws IOException {
         //add your code here
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        String s = "http://javarush.ru/alpha/index.html?lvl=15&view&name=Amigo";//bufferedReader.readLine();
-        s = s.substring(s.indexOf("?")+1);
-        String[] str = s.split("&");
-        System.out.println(str);
-        Pattern pattern = Pattern.compile("a-z");
-        Matcher matcher = pattern.matcher(s);
-        System.out.println(matcher.matches());
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String tmp = br.readLine();
+        String[] parsParam = (tmp.substring(tmp.indexOf('?') + 1)).split("&");
+        String out = "";
+        Map<String, String> map = new LinkedHashMap<>();
+        for (String x : parsParam) {
+            String parametr = x.replaceAll("(=).+", "");
+            String value = x.replaceAll(".+(=)", "");
+            map.put(parametr, value);
+        }
+        if (map.containsKey("obj")) {
+            for (Map.Entry<String, String> pair : map.entrySet()) {
+                String key = pair.getKey();
+                out = out + key + " ";
+            }
+            System.out.println(out.trim());
+                try {
+                    alert(Double.parseDouble(map.get("obj")));
+                }catch (NumberFormatException e){
+                    alert(map.get("obj"));
+                }
+        } else {
+            for (Map.Entry<String, String> pair : map.entrySet()) {
+                String key = pair.getKey();
+                out = out + key + " ";
+            }
+            System.out.println(out.trim());
+        }
     }
 
     public static void alert(double value) {

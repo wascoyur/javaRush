@@ -21,46 +21,13 @@ public class Solution {
     public static String firstFileName;
     public static String secondFileName;
     static {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        try {
-            String firstFileName = reader.readLine();
-            String secondFileName = reader.readLine();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        firstFileName = "d:\\f1";
+        secondFileName = "d:\\f2";
     }
 
     public static void main(String[] args) throws InterruptedException {
         systemOutPrintln(firstFileName);
         systemOutPrintln(secondFileName);
-    }
-    public static class  ReadFileThread implements ReadFileInterface, Runnable {
-
-
-        @Override
-        public void setFileName(String fullFileName) {
-            File file = new File(firstFileName);
-        }
-
-        @Override
-        public String getFileContent() {
-            return null;
-        }
-
-        @Override
-        public void join() throws InterruptedException {
-
-        }
-
-        @Override
-        public void start() {
-
-        }
-
-        @Override
-        public void run() {
-
-        }
     }
 
     public static void systemOutPrintln(String fileName) throws InterruptedException {
@@ -79,5 +46,34 @@ public class Solution {
         void join() throws InterruptedException;
 
         void start();
+    }
+
+    public static class ReadFileThread implements ReadFileInterface{
+
+        @Override
+        public void setFileName(String fullFileName) {
+            try {
+               BufferedReader readFile = new BufferedReader(new FileReader(firstFileName));
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+        }
+
+        @Override
+        public String getFileContent() {
+            char[] ch = new char[(int) new File(firstFileName).length()];
+
+            return null;
+        }
+
+        @Override
+        public void join() throws InterruptedException {
+
+        }
+
+        @Override
+        public void start() {
+
+        }
     }
 }

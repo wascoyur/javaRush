@@ -1,6 +1,8 @@
 package com.javarush.test.level25.lesson02.task02;
 
-import java.util.*;
+
+import java.util.LinkedList;
+import java.util.List;
 
 /* Машину на СТО не повезем!
 Инициализируйте поле wheels используя данные из loadWheelNamesFromDB.
@@ -9,10 +11,6 @@ import java.util.*;
 Сигнатуры не менять.
 */
 public class Solution {
-    public Solution() {
-        new Car();
-    }
-
     public static enum Wheel {
         FRONT_LEFT,
         FRONT_RIGHT,
@@ -21,12 +19,18 @@ public class Solution {
     }
 
     public static class Car {
-        protected List<Wheel> wheels;
+        protected List<Wheel> wheels = new LinkedList<>();
 
         public Car() {
+
             //init wheels here
-            for (int i = 0; i < loadWheelNamesFromDB().length; i++) {
-               // wheels.add(loadWheelNamesFromDB()[i])
+            String[] strings = loadWheelNamesFromDB();
+            if (strings.length == Wheel.values().length){
+                for (int i = 0; i < strings.length; i++) {
+                    Wheel wheel = Wheel.valueOf(strings[i]);
+                    int j = wheel.ordinal();
+                    wheels.add(wheel);
+                }
             }
 
 
@@ -39,6 +43,7 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        Solution s = new Solution();
+        Car car = new Car();
+        System.out.println(car.wheels);
     }
 }
