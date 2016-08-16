@@ -14,13 +14,12 @@ public class Solution {
         //you can find your_file_name.tmp in your TMP directory or fix outputStream/inputStream according to your real file location
         //вы можете найти your_file_name.tmp в папке TMP или исправьте outputStream/inputStream в соответствии с путем к вашему реальному файлу
         try {
-            File your_file_name = File.createTempFile("your_file_name", null);
+            File your_file_name = File.createTempFile("your_file_name", null, new File("d:\\"));
             OutputStream outputStream = new FileOutputStream(your_file_name);
             InputStream inputStream = new FileInputStream(your_file_name);
 
             JavaRush javaRush = new JavaRush();
             //initialize users field for the javaRush object here - инициализируйте поле users для объекта javaRush тут
-            javaRush.users = (List<User>) new User();
             javaRush.save(outputStream);
             outputStream.flush();
 
@@ -45,13 +44,6 @@ public class Solution {
 
         public void save(OutputStream outputStream) throws Exception {
             //implement this method - реализуйте этот метод
-            PrintWriter writer = new PrintWriter(outputStream);
-            writer.println();
-//            private String isfirstName ;
-//            private String lastName;
-//            private Date birthDate;
-//            private boolean isMale;
-
         }
 
         public void load(InputStream inputStream) throws Exception {
