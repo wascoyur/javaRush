@@ -4,26 +4,40 @@ import java.util.ArrayList;
 import java.util.List;
 
 /* Поиграем?
-Три человека играют в игру. Каждый игрок(Gamer) характеризуется двумя параметрами: фамилией(name) и количеством действий в секунду (rating).
+Три человека играют в игру. Каждый игрок(Gamer) характеризуется двумя параметрами:
+ фамилией(name) и количеством действий в секунду (rating).
 Нужно вывести в консоль ход игры и определить победителя и проигравших.
 Итак...
 1. Разберись, что делает программа.
-1.1. List<String> steps хранит последовательность действий, которое каждый игрок выполняет от 0 до последнего.
-1.2. isWinnerFound показывает, найден победитель или нет.
-1.3. метод sleep выбрасывает InterruptedException и принимает параметр типа long.
-1.4. Игроки играют независимо друг от друга.
+    1.1. List<String> steps хранит последовательность действий, которое каждый
+    игрок выполняет от 0 до последнего.
+    1.2. isWinnerFound показывает, найден победитель или нет.
+    1.3. метод sleep выбрасывает InterruptedException и принимает параметр типа long.
+    1.4. Игроки играют независимо друг от друга.
 
 2. Реализуйте логику метода run так, чтобы для каждого игрока:
+<<<<<<< HEAD
 2.1. За 1 секунду через равные интервалы времени выводились в консоль действия, описанные в steps. Количество выведенных действий должно равняться rating.
 2.2. Любой текст должен начинаться с фамилии игрока (метод getName()), потом следовать двоеточие, а затем сам текст. Пример: [Ivanov:Начало игры].
 2.3. Когда игрок выполнит все действия из steps, то он считается победителем. Выведите [getName() + ":победитель!"].
 2.4. Когда найден победитель, то игра останавливается, и остальные игроки считаются побежденными. Выведите для них [getName() + ":проиграл"].
+=======
+    2.1. За 1 секунду через равные интервалы времени выводились в консоль действия,
+    описанные в steps. Количество выведенных действий должно равняться rating.
+    2.2. Любой текст должен начинаться с фамилии игрока (метод getName()),
+    потом следовать двоеточие, а затем сам текст. Пример: [Ivanov:Начало игры].
+    2.3. Когда игрок выполнит все действия из steps,
+    то он считается победителем. Выведите [getName() + ":победитель!"].
+    2.4. Когда найден победитель, то игра останавливается,
+    и остальные игроки считаются побежденными. Выведите для них [getName() + ":проиграл"].
+>>>>>>> origin/master
 */
 
 public class Solution {
     public static void main(String[] args) throws InterruptedException {
         OnlineGame onlineGame = new OnlineGame();
         onlineGame.start();
+
     }
 
     public static class OnlineGame extends Thread {
@@ -66,6 +80,7 @@ public class Solution {
         @Override
         public void run() {
             //Add your code here - добавь код тут
+<<<<<<< HEAD
             int perid = 1000/(Gamer.this.rating);//период выполнения одного хода
             int rate = Gamer.this.rating;
             for (int i = 0; i < OnlineGame.steps.size() && i <= rate  ; i++) {
@@ -81,5 +96,21 @@ public class Solution {
             OnlineGame.isWinnerFound = true;
 
         }
+=======
+            int rate = Math.round(1000/this.rating);
+            try {
+                for (int i = 0; i < OnlineGame.steps.size(); i++){
+                System.out.println(Thread.currentThread().getName() + ":" + OnlineGame.steps.get(i));
+                 sleep(rate);
+                    }
+                System.out.println(this.getName() + ":победитель!");
+                OnlineGame.isWinnerFound = true;
+                } catch (InterruptedException e) {
+                    System.out.println(this.getName() + ":проиграл");
+
+                }
+            }
+       }
+>>>>>>> origin/master
     }
-}
+

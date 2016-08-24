@@ -1,5 +1,9 @@
 package com.javarush.test.level21.lesson08.task01;
 
+<<<<<<< HEAD
+=======
+import java.io.*;
+>>>>>>> origin/master
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -38,5 +42,18 @@ public class Solution {
             this.age = age;
             this.name = name;
         }
+    }
+
+    @Override
+    protected Solution clone(Solution origin) throws CloneNotSupportedException {
+        ByteArrayOutputStream store = new ByteArrayOutputStream();
+        try {
+            ObjectOutputStream doSave = new ObjectOutputStream(store);
+            doSave.writeObject();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return cloneSol;
     }
 }

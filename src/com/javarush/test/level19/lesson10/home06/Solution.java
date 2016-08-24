@@ -1,9 +1,13 @@
 package com.javarush.test.level19.lesson10.home06;
 
+<<<<<<< HEAD
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+=======
+import java.io.*;
+>>>>>>> origin/master
 import java.util.HashMap;
 import java.util.Map;
 
@@ -43,6 +47,7 @@ public class Solution {
         map.put(11, "одиннадцать");
         map.put(12, "двенадцать");
     }
+<<<<<<< HEAD
 
     public static void main(String[] args) throws IOException {
         BufferedReader rfn = new BufferedReader(new FileReader("d:\\f1"));
@@ -59,6 +64,28 @@ public class Solution {
 
             }
             System.out.println();
+=======
+
+    public static void main(String[] args) throws IOException {
+//        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedReader br = new BufferedReader(new FileReader("d:\\f1"));
+
+        while (br.ready()) {
+            String s = br.readLine();
+            String[] sMass = s.split("\\b\\b");
+            String[] clone = sMass;
+            for (int i = 0; i < sMass.length; i++) {
+                for (int j = 0; j < map.size() ; j++) {
+                    if (map.containsKey(sMass[i].trim())) {
+                        clone[i] = map.get(sMass[i]);
+                    }
+                }
+            }
+            for (String c: clone){
+                System.out.print(c);
+            }
+
+>>>>>>> origin/master
         }
 
 }

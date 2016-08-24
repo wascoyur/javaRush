@@ -37,7 +37,13 @@ public class Hippodrome {
     public Horse getWinner() {
         double max = 0;
         Horse win = null;
-        //todo: найти победителя
+        
+        for (int i = 0; i < horses.size(); i++) {
+            if (horses.get(i).distance > max) {
+                win = horses.get(i);
+            }
+        }
+
         return win;
     }
     public void printWinner(){

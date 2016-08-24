@@ -9,7 +9,26 @@ package com.javarush.test.level18.lesson10.home02;
 4. Закрыть потоки. Не использовать try-with-resources
 */
 
+import java.io.*;
+
 public class Solution {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        FileInputStream fos = new FileInputStream(args[0]);
+        BufferedReader br = new BufferedReader(new InputStreamReader(fos));
+        char[] chars = new char[fos.available()];
+        double space = 0;
+        double all = 0;
+        br.read(chars);
+
+        for (int i = 0;i< chars.length; i++) {
+            if (chars[i] == ' ')space++;
+            all++;
+        }
+        String str = new String(chars);
+        double d = space/all * 100;
+        System.out.printf("%.2f", d);
+        br.close();fos.close();
+
+
     }
 }

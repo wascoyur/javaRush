@@ -19,6 +19,7 @@ import java.util.regex.Pattern;
 
 public class Solution {
     public static void main(String[] args) throws IOException {
+<<<<<<< HEAD
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String fName = br.readLine();
         String out = br.readLine();
@@ -42,4 +43,19 @@ public class Solution {
         rf.close();
         bw.close();
     }
+=======
+//        BufferedReader rfName = new BufferedReader(new InputStreamReader(System.in));
+//        String firsName = rfName.readLine();
+//        String secondName = rfName.readLine();
+        FileInputStream fis = new FileInputStream(args[0]);
+        FileReader fr = new FileReader((args[0]));
+        FileWriter fw = new FileWriter(args[1]);
+        String tmp = "";
+        char[] ch = new char[fis.available()] ;
+        fr.read(ch);
+//        tmp = (String.valueOf(ch)).replaceAll("");
+        System.out.println(ch);
+        }
+>>>>>>> origin/master
 }
+

@@ -5,18 +5,26 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/src/com/javarush/test/level16/lesson13/home03/tmp" />
+<<<<<<< HEAD
+=======
+      <excludeFolder url="file://$MODULE_DIR$/src/com/javarush/test/level17/lesson10/home03" />
+>>>>>>> origin/master
       <excludeFolder url="file://$MODULE_DIR$/src/com/javarush/test/level17/lesson10/home06/TMP" />
       <excludeFolder url="file://$MODULE_DIR$/src/com/javarush/test/level18/lesson08/task04" />
       <excludeFolder url="file://$MODULE_DIR$/src/com/javarush/test/level19/Patterns" />
       <excludeFolder url="file://$MODULE_DIR$/src/com/javarush/test/level19/lesson10/home03" />
       <excludeFolder url="file://$MODULE_DIR$/src/com/javarush/test/level19/tmp" />
+<<<<<<< HEAD
       <excludeFolder url="file://$MODULE_DIR$/src/com/javarush/test/level20/lesson07/tmp" />
+=======
+>>>>>>> origin/master
       <excludeFolder url="file://$MODULE_DIR$/src/com/javarush/test/level21/lesson08/task01" />
       <excludeFolder url="file://$MODULE_DIR$/src/com/javarush/test/level21/lesson08/task02" />
       <excludeFolder url="file://$MODULE_DIR$/src/com/javarush/test/level22/lesson18/big01" />
       <excludeFolder url="file://$MODULE_DIR$/src/com/javarush/test/level23/lesson04/home01" />
       <excludeFolder url="file://$MODULE_DIR$/src/com/javarush/test/level23/lesson06/task02" />
       <excludeFolder url="file://$MODULE_DIR$/src/com/javarush/test/level23/lesson08/home01/vo" />
+<<<<<<< HEAD
       <excludeFolder url="file://$MODULE_DIR$/src/com/javarush/test/level24/Exampls" />
       <excludeFolder url="file://$MODULE_DIR$/src/com/javarush/test/level24/lesson02/home01" />
       <excludeFolder url="file://$MODULE_DIR$/src/com/javarush/test/level24/lesson02/task02" />
@@ -24,6 +32,11 @@
       <excludeFolder url="file://$MODULE_DIR$/src/com/javarush/test/level24/lesson09/task01" />
       <excludeFolder url="file://$MODULE_DIR$/src/com/javarush/test/level25/lesson05/home01" />
       <excludeFolder url="file://$MODULE_DIR$/src/com/javarush/test/level25/lesson05/task02" />
+=======
+      <excludeFolder url="file://$MODULE_DIR$/src/com/javarush/test/level24/lesson06/home03" />
+      <excludeFolder url="file://$MODULE_DIR$/src/com/javarush/test/level24/lesson09/task01" />
+      <excludeFolder url="file://$MODULE_DIR$/src/com/javarush/test/level25/lesson02/home01" />
+>>>>>>> origin/master
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

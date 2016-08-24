@@ -21,12 +21,15 @@ public class Solution {
     public static String firstFileName;
     public static String secondFileName;
     static {
+<<<<<<< HEAD
 //        BufferedReader rf1 = new BufferedReader(new InputStreamReader(System.in));
 //        try {
 //           firstFileName = rf1.readLine();
 //        } catch (Exception e) {
 //            e.printStackTrace();
 //        }
+=======
+>>>>>>> origin/master
         firstFileName = "d:\\f1";
         secondFileName = "d:\\f2";
     }
@@ -46,6 +49,18 @@ public class Solution {
     public static interface ReadFileInterface {
 
         void setFileName(String fullFileName);
+<<<<<<< HEAD
+=======
+
+        String getFileContent();
+
+        void join() throws InterruptedException;
+
+        void start();
+    }
+
+    public static class ReadFileThread implements ReadFileInterface{
+>>>>>>> origin/master
 
         String getFileContent();
 
@@ -56,11 +71,23 @@ public class Solution {
     public static class ReadFileThread implements ReadFileInterface{
         @Override
         public void setFileName(String fullFileName) {
+<<<<<<< HEAD
 
+=======
+            try {
+               BufferedReader readFile = new BufferedReader(new FileReader(firstFileName));
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+>>>>>>> origin/master
         }
 
         @Override
         public String getFileContent() {
+<<<<<<< HEAD
+=======
+            char[] ch = new char[(int) new File(firstFileName).length()];
+>>>>>>> origin/master
 
             return null;
         }

@@ -9,6 +9,6 @@ import java.util.*;
 4. Список будет использоваться нитями, поэтому позаботьтесь, чтобы все методы были синхронизированы.
 */
 
-public class Solution {
+public class Solution{
     private ArrayList<Long> original = new ArrayList<Long>();
 }

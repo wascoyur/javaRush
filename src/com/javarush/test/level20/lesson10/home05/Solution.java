@@ -1,7 +1,6 @@
 package com.javarush.test.level20.lesson10.home05;
 
 import java.io.PrintStream;
-import java.io.Serializable;
 import java.util.logging.Logger;
 
 /* Сериализуйте Person
@@ -16,8 +15,13 @@ public class Solution {
         transient final String greetingString;
         String country;
         Sex sex;
+<<<<<<< HEAD
         transient PrintStream outputStream;
         transient Logger logger;
+=======
+        PrintStream outputStream;
+        Logger logger;
+>>>>>>> origin/master
 
         Person(String firstName, String lastName, String country, Sex sex) {
             this.firstName = firstName;

@@ -1,5 +1,11 @@
 package com.javarush.test.level21.lesson02.task01;
 
+<<<<<<< HEAD
+=======
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+>>>>>>> origin/master
 /* Определяем адрес сети
 1) Даны IP-адрес и маска подсети, необходимо вычислить адрес сети - метод getNetAddress.
 Используйте операцию поразрядной конъюнкции (логическое И).
@@ -21,6 +27,14 @@ public class Solution {
     }
 
     public static byte[] getNetAddress(byte[] ip, byte[] mask) {
+<<<<<<< HEAD
+=======
+        Map<Byte,Byte> map = new LinkedHashMap<>();
+        map.
+        for (byte b : ip) {
+
+        }
+>>>>>>> origin/master
         return new byte[4];
     }
 

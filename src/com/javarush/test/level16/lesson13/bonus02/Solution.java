@@ -1,8 +1,5 @@
 package com.javarush.test.level16.lesson13.bonus02;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,103 +16,5 @@ import java.util.List;
 */
 
 public class Solution {
-
     public static List<Thread> threads = new ArrayList<Thread>(5);
-    public static class Infinity extends Thread{
-
-        @Override
-        public void run() {
-//            int CountInf = 0;
-            while (true){
-//               CountInf++;
-//
-//            System.out.println("... бесконечность # " + CountInf);
-//                try {
-//                    sleep(10000);
-//                } catch (InterruptedException e) {
-//                    e.printStackTrace();
-//                }
-            }
-
-        }
-    }
-    public static class Except extends Thread{
-
-        @Override
-        public void run() {
-            try {
-                //d каких случаях выбрасывается Интеррупт Ексепшн?
-                throw new InterruptedException();
-            }
-            catch (InterruptedException e){
-                System.out.println("InterruptedException");
-            }
-
-        }
-    }
-    public static class Ura extends Thread{
-        @Override
-        public void run() {
-            while (true){
-                System.out.println("Ура");
-                try {
-                    Thread.sleep(500);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-    }
-    public static class Fourth extends Thread implements Message{
-
-        @Override
-        public void showWarning() {
-            return;
-        }
-
-        @Override
-        public void run() {
-            if (currentThread().isAlive()) {
-                interrupt();
-            }
-        }
-    }
-    public static class Numbers extends Thread{
-        @Override
-        public void run() {
-            System.out.println("start Numbers");
-            BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-            int s = 0;
-            String a;
-            while (true){
-                try {
-                    a = reader.readLine();
-                    if (!a.equals("N")){
-                    s = s + Integer.parseInt(a);}
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-                System.out.println(s);
-                break;
-            }
-        }
-    }
-    static {
-        threads.add(new Thread(new Infinity()));
-        threads.add(new Thread(new Except()));
-        threads.add(new Thread (new Ura()));
-        threads.add(new Thread(new Fourth()));
-        threads.add(new Thread(new Numbers()));
-    }
-
-    public static void main(String[] args) throws InterruptedException {
-        for (int i = 0; i < threads.size() ; i++) {
-            threads.get(i).start();
-        }
-//todo: почему-то запускается только первый поток. level16.lesson10.task05;
-
-        System.out.println("Жду...");
-        Thread.sleep(10000);
-    }
-
 }

@@ -18,14 +18,14 @@ public class Solution {
             InputStream inputStream = new FileInputStream(your_file_name);
 
             Object object = new Object();
-            object.stringer1 = new Stringer();   //string #1
-            object.stringer2 = new Stringer();   //string #2
+            object.string1 = new String();   //string #1
+            object.string2 = new String();   //string #2
             object.save(outputStream);
             outputStream.flush();
 
             Object loadedObject = new Object();
-            loadedObject.stringer1 = new Stringer(); //string #3
-            loadedObject.stringer2 = new Stringer(); //string #4
+            loadedObject.string1 = new String(); //string #3
+            loadedObject.string2 = new String(); //string #4
 
 
             loadedObject.load(inputStream);
@@ -45,33 +45,24 @@ public class Solution {
 
 
     public static class Object {
-        public Stringer stringer1;
-        public Stringer stringer2;
+        public String string1;
+        public String string2;
 
         public void save(OutputStream outputStream) throws Exception {
             //implement this method - реализуйте этот метод
-            PrintWriter save = new PrintWriter(outputStream);
-            save.println(stringer1);
-            save.println(stringer2);
-            save.flush();
         }
 
         public void load(InputStream inputStream) throws Exception {
             //implement this method - реализуйте этот метод
-            BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
-            java.lang.Object tmp = reader.readLine();
-            stringer1 = (Stringer)tmp;
-            java.lang.Object tmp2 = reader.readLine();
-            stringer2 = (Stringer)tmp;
         }
     }
 
     public static int countStrings;
 
-    public static class Stringer {
+    public static class String {
         private final int number;
 
-        public Stringer() {
+        public String() {
             number = ++countStrings;
         }
 

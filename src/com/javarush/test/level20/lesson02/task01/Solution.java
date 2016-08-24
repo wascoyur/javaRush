@@ -56,16 +56,22 @@ public class Solution {
 
         public void save(OutputStream outputStream) throws Exception {
             //implement this method - реализуйте этот метод
+<<<<<<< HEAD
             PrintWriter writer = new PrintWriter(outputStream);
             writer.println(name);
             writer.println(assets);
+=======
+>>>>>>> origin/master
         }
 
         public void load(InputStream inputStream) throws Exception {
             //implement this method - реализуйте этот метод
+<<<<<<< HEAD
             BufferedReader rd = new BufferedReader(new InputStreamReader(inputStream));
             name = rd.readLine();
 //            assets = rd.readLine();
+=======
+>>>>>>> origin/master
         }
     }
 }
