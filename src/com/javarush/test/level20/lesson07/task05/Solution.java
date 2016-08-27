@@ -11,6 +11,7 @@ Hint/Подсказка:
 public class Solution implements Serializable, Runnable {
     transient private Thread runner;
     private int speed;
+    final long serialVersionUID = 1L;
 
     public Solution(int speed) {
         this.speed = speed;
@@ -20,6 +21,7 @@ public class Solution implements Serializable, Runnable {
 
     public void run() {
         // do something here, does not matter
+
     }
 
     /**
@@ -36,6 +38,20 @@ public class Solution implements Serializable, Runnable {
 
     private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException {
         in.defaultReadObject();
+        runner = new Thread(this);
         runner.start();
+    }
+
+    public static void main(String[] args) throws IOException, ClassNotFoundException {
+        Solution sol = new Solution(5);
+        FileOutputStream fos = new FileOutputStream("d:\\f1");
+        ObjectOutputStream oos = new ObjectOutputStream(fos);
+        oos.writeObject(sol);
+//        sol = null;
+//        Solution two = new Solution(500);
+        FileInputStream fis = new FileInputStream("d:\\f1");
+        ObjectInputStream ois = new ObjectInputStream(fis);
+        Solution clone = (Solution)ois.readObject();
+
     }
 }

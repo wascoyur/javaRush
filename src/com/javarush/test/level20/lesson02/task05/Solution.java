@@ -13,17 +13,18 @@ public class Solution {
         //you can find your_file_name.tmp in your TMP directory or fix outputStream/inputStream according to your real file location
         //вы можете найти your_file_name.tmp в папке TMP или исправьте outputStream/inputStream в соответствии с путем к вашему реальному файлу
         try {
-            File your_file_name = File.createTempFile("your_file_name", null);
-            OutputStream outputStream = new FileOutputStream(your_file_name);
-            InputStream inputStream = new FileInputStream(your_file_name);
+//            File your_file_name = File.createTempFile("your_file_name", null);
+            OutputStream outputStream = new FileOutputStream("d:\\f1");
+            InputStream inputStream = new FileInputStream("d:\\f2");
 
-            Object object = new Object();
-            object.string1 = new String();   //string #1
-            object.string2 = new String();   //string #2
+            MyObject object = new MyObject();
+            object.string1 = new String("ObjOne");   //string #1
+            object.string2 = new String("ObjTwo");   //string #2
+
             object.save(outputStream);
             outputStream.flush();
 
-            Object loadedObject = new Object();
+            MyObject loadedObject = new MyObject();
             loadedObject.string1 = new String(); //string #3
             loadedObject.string2 = new String(); //string #4
 
@@ -44,30 +45,35 @@ public class Solution {
     }
 
 
-    public static class Object {
+    public static class MyObject {
         public String string1;
         public String string2;
 
         public void save(OutputStream outputStream) throws Exception {
             //implement this method - реализуйте этот метод
+            PrintWriter writer = new PrintWriter(outputStream);
+            writer.println(string1);
+            writer.println(string2);
         }
 
         public void load(InputStream inputStream) throws Exception {
             //implement this method - реализуйте этот метод
+            BufferedReader br = new BufferedReader(new InputStreamReader(inputStream));
+
         }
     }
 
     public static int countStrings;
 
-    public static class String {
-        private final int number;
-
-        public String() {
-            number = ++countStrings;
-        }
-
-        public void print() {
-            System.out.println("string #" + number);
-        }
-    }
+//    public static class String {
+//        private final int number;
+//
+//        public String() {
+//            number = ++countStrings;
+//        }
+//
+//        public void print() {
+//            System.out.println("string #" + number);
+//        }
+//    }
 }

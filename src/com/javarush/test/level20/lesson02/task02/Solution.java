@@ -2,6 +2,7 @@ package com.javarush.test.level20.lesson02.task02;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /* Читаем и пишем в файл: JavaRush
@@ -15,11 +16,12 @@ public class Solution {
         //вы можете найти your_file_name.tmp в папке TMP или исправьте outputStream/inputStream в соответствии с путем к вашему реальному файлу
         try {
             File your_file_name = File.createTempFile("your_file_name", null);
-            OutputStream outputStream = new FileOutputStream(your_file_name);
-            InputStream inputStream = new FileInputStream(your_file_name);
+            OutputStream outputStream = new FileOutputStream("d:\\f1");
+            InputStream inputStream = new FileInputStream("d:\\f1");
 
             JavaRush javaRush = new JavaRush();
             //initialize users field for the javaRush object here - инициализируйте поле users для объекта javaRush тут
+            javaRush.users.add(new User());
             javaRush.save(outputStream);
             outputStream.flush();
 
@@ -44,10 +46,16 @@ public class Solution {
 
         public void save(OutputStream outputStream) throws Exception {
             //implement this method - реализуйте этот метод
+            ObjectOutputStream oos = new ObjectOutputStream(outputStream);
+            oos.writeObject(outputStream);
+            oos.close();
         }
 
         public void load(InputStream inputStream) throws Exception {
             //implement this method - реализуйте этот метод
+            ObjectInputStream ois = new ObjectInputStream(inputStream);
+
+
         }
     }
 }

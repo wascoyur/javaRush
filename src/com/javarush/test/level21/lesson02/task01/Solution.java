@@ -24,14 +24,18 @@ public class Solution {
     }
 
     public static byte[] getNetAddress(byte[] ip, byte[] mask) {
-        Map<Byte,Byte> map = new LinkedHashMap<>();
-        map.
-        for (byte b : ip) {
-
+//        Map<Byte,Byte> map = new LinkedHashMap<>();
+        byte[] result = new byte[4];
+        for (int i = 0; i < ip.length; i++) {
+            result[i] = (byte) (ip[i] & mask[i]);
         }
-        return new byte[4];
+        return result;
     }
 
     public static void print(byte[] bytes) {
+        for (Byte x : bytes) {
+            System.out.printf(String.format("Integer.toBinaryString((int)x)"));
+        }
+
     }
 }

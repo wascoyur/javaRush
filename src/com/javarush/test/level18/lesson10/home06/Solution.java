@@ -16,29 +16,43 @@ f 361
 */
 
 import java.io.*;
+import java.util.Iterator;
 import java.util.Map;
 import java.util.TreeMap;
 
 public class Solution {
     public static void main(String[] args) throws IOException {
-        BufferedReader rf = new BufferedReader(new FileReader(args[0]));
-        char[]inp = new char[(int) new File(args[0]).length()];
-        Map<String,Integer> list = new TreeMap<>();
-        rf.read(inp);
-        System.out.println((int)'z');
-        int tmp = 150;
-        char e = Character.forDigit(tmp,16);
-        for (int i = ((int)'A'); i <= ((int)'z'); i++) {
-            list.put((("s")), 0);
-            for (char x : inp) {
-                if (((int) x) == i) {
+        BufferedReader br = new BufferedReader(new FileReader(args[0]));
+        TreeMap<String, Integer> map = new TreeMap<>();
 
+        char[] ch = new char[(int) new File(args[0]).length()];
+        br.read(ch);
+        for (char add : ch) {
+            String tmp = (String.valueOf(add));
+            if (tmp.matches("[A-z]"))map.put(tmp, null);
+        }
+
+        for (char x : ch) {
+            Iterator<Map.Entry<String, Integer>> iterator = map.entrySet().iterator();
+            while (iterator.hasNext()) {
+                Map.Entry<String,Integer> pair = iterator.next();
+                String key = pair.getKey();
+                Integer value = pair.getValue();
+                if (key.equals(String.valueOf(x))) {
+                    if (value == null){value = 1;} else value++;
+                    map.put(key, value);break;
                 }
             }
+
+        }
+        Iterator<Map.Entry<String, Integer>> iterator = map.entrySet().iterator();
+        while (iterator.hasNext()) {
+            Map.Entry<String,Integer> pair = iterator.next();
+            String key = pair.getKey();
+            Integer value = pair.getValue();
+            String pr = String.valueOf(value);
+            System.out.println(key +" " + pr);
         }
 
     }
-
-
-
 }

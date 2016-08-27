@@ -4,7 +4,7 @@ package com.javarush.test.level17.lesson10.home02;
 Реализуйте интерфейс Comparable<Beach> в классе Beach, который будет использоваться нитями.
 */
 
-public class Beach implements Comparable {
+public class Beach implements Comparable <Beach>{
     private String name;      //название
     private float distance;   //расстояние
     private int quality;    //качество
@@ -15,7 +15,7 @@ public class Beach implements Comparable {
         this.quality = quality;
     }
 
-    public String getName() {
+     public String getName() {
         return name;
     }
 
@@ -23,7 +23,7 @@ public class Beach implements Comparable {
         this.name = name;
     }
 
-    public float getDistance() {
+     public float getDistance() {
         return distance;
     }
 
@@ -31,7 +31,7 @@ public class Beach implements Comparable {
         this.distance = distance;
     }
 
-    public int getQuality() {
+     public int getQuality() {
         return quality;
     }
 
@@ -40,10 +40,12 @@ public class Beach implements Comparable {
     }
 
     @Override
-    synchronized public int compareTo(Object o) {
-        Beach obj = (Beach)o;
-        int distanceParam = (int) (distance - obj.getDistance());
-        int qualityParam = quality - obj.getQuality();
-        return 10000 * name.compareTo(obj.getName()) + 100 * distanceParam + qualityParam;
+   synchronized public int compareTo(Beach o) {
+        int distIndex = (int) (distance - o.getDistance());
+        int qualIndex = quality - o.getQuality();
+        return 10000 * name.compareTo(o.getName()) + 100 * distIndex + qualIndex;
     }
+
+
+
 }
