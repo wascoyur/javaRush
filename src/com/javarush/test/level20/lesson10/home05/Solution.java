@@ -1,6 +1,6 @@
 package com.javarush.test.level20.lesson10.home05;
 
-import java.io.PrintStream;
+import java.io.*;
 import java.util.logging.Logger;
 
 /* Сериализуйте Person
@@ -8,30 +8,38 @@ import java.util.logging.Logger;
 */
 public class Solution {
 
-    public static class Person {
+    public static class Person implements Serializable {
         String firstName;
         String lastName;
-        String fullName;
-        final String greetingString;
+         String fullName;
+        final String greetingString = "Hello, ";
         String country;
-        Sex sex;
-        PrintStream outputStream;
-        Logger logger;
+        transient Sex sex;
+        transient PrintStream outputStream;
+       transient Logger logger;
+        final long serialVersionUID = 1L;
 
         Person(String firstName, String lastName, String country, Sex sex) {
             this.firstName = firstName;
             this.lastName = lastName;
             this.fullName = String.format("%s, %s", lastName, firstName);
-            this.greetingString = "Hello, ";
             this.country = country;
             this.sex = sex;
             this.outputStream = System.out;
             this.logger = Logger.getLogger(String.valueOf(Person.class));
         }
+        private void writeObject(ObjectOutputStream out) throws IOException {
+            out.defaultWriteObject();
+
+        }
+
+
     }
 
     enum Sex {
         MALE,
         FEMALE
     }
+
+
 }
