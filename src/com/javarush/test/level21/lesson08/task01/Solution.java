@@ -1,6 +1,7 @@
 package com.javarush.test.level21.lesson08.task01;
 
-import java.io.*;
+import java.lang.Cloneable;
+import java.lang.Override;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -9,7 +10,7 @@ import java.util.Map;
 Данные в карте users также должны клонироваться.
 Метод main изменять нельзя.
 */
-public class Solution {
+public class Solution implements Cloneable{
 
     public static void main(String[] args) {
         Solution solution = new Solution();
@@ -40,17 +41,8 @@ public class Solution {
             this.name = name;
         }
     }
-
     @Override
-    protected Solution clone(Solution origin) throws CloneNotSupportedException {
-        ByteArrayOutputStream store = new ByteArrayOutputStream();
-        try {
-            ObjectOutputStream doSave = new ObjectOutputStream(store);
-            doSave.writeObject();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        return cloneSol;
+    protected Solution clone() throws CloneNotSupportedException{
+        return new Solution();
     }
 }
