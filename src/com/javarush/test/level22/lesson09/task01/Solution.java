@@ -20,44 +20,48 @@ public class Solution {
     public static List<Pair> result = new LinkedList<>();
 
     public static void main(String[] args) throws IOException {
-        String s = "d:\\f1";
-        BufferedReader br = new BufferedReader(new FileReader(s));
-        char[] ch = new char[(int) (new File(s).length())];
-        br.read(ch);
-        Set<String> setMass = new HashSet<>();
-        Set<String> clonesetMass = new HashSet<>();
+        String f = "d:\\f1";
+        Map<String,String> map = new HashMap<>();
+        ArrayList<String> clone = new ArrayList<>();
+        BufferedReader redFile = new BufferedReader(new FileReader(f));
+        char[] ch = new char[(int) new File(f).length()];
+        redFile.read(ch,0,((int) new File(f).length()));
+        String tmp = (String.valueOf(ch).trim());
+        String[] array = tmp.split("( |(\\n))");
+        for (int i = 0; i < array.length; i++) {
+            String t = array[i].replaceAll("\\p{Cntrl}", "");
+            array[i] = t;
+            }
+        Collections.addAll(clone, array);
+        for (String x : clone) {
+            map.put(x, null);
+        }
 
-        String[] mass = (String.valueOf(ch)).trim().split("\\b( )+\\b");
-        Collections.addAll(setMass, mass);
-        Collections.addAll(clonesetMass, mass);
-
-        for (String source : setMass) {
-            StringBuilder sb = new StringBuilder(source).reverse();
-            String invert = sb.toString();
-            Iterator<String> iter = clonesetMass.iterator();
-            while (iter.hasNext() ){
-                clonesetMass.iterator();
-                if (iter.next().equals(invert) ){
-                    result.add(new Pair(source,(invert)));
-                    iter.remove();
-                    Solution.MyRemove(iter);
-                }
+        Iterator<String> x = clone.iterator();
+        while (x.hasNext()) {
+            StringBuilder t = new StringBuilder(x.next());
+            String revers = new StringBuilder(t).reverse().toString();
+            if (map.containsKey(revers)) {
+                map.remove(revers);
+                map.put(t.toString(), revers);
+                x.remove();
             }
         }
-        for (Pair x : result) {
-            System.out.println(x);
+        Collection<String> collection;
+        for (String ignored : collection){
+            if (ignored == null) ignored.//todo: удалить ключи с нулл-значениями.
+        }
+        for (Map.Entry<String, String> pair : map.entrySet()) {
+            if (pair.getValue() == null)
+        }
+        System.out.println();
         }
 
-    }
+
 
     public static class Pair {
         String first;
         String second;
-
-        public Pair(String mas, String s) {
-            this.first = mas;
-            this.second = s;
-        }
 
         @Override
         public String toString() {
@@ -67,10 +71,6 @@ public class Solution {
                     first.compareTo(second) < 0 ? first + " " + second : second + " " + first;
 
         }
-    }
-
-    public static void MyRemove(Iterator iterator) {
-
     }
 
 }
