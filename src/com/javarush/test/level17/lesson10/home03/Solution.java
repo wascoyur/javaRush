@@ -6,10 +6,8 @@ import java.util.List;
 /* Аптека
 Реализуй интерфейс Runnable в классах Apteka и Person.
 Все нити должны работать пока не isStopped
-Логика для Apteka: drugsController должен сделать закупку случайного лекарства (getRandomDrug)
- в количестве (getRandomCount) и подождать 300 мс
-Логика для Person: drugsController должен сделать продажу случайного лекарства (getRandomDrug)
- в количестве (getRandomCount) и подождать 100 мс
+Логика для Apteka: drugsController должен сделать закупку случайного лекарства (getRandomDrug) в количестве (getRandomCount) и подождать 300 мс
+Логика для Person: drugsController должен сделать продажу случайного лекарства (getRandomDrug) в количестве (getRandomCount) и подождать 100 мс
 Расставь synchronized там, где это необходимо
 */
 
@@ -30,12 +28,34 @@ public class Solution {
         isStopped = true;
     }
 
-    public static class Apteka {
+    public static class Apteka implements Runnable {
 
+        @Override
+        public void run() {
+            while (!isStopped) {
+                drugsController.buy(getRandomDrug(),getRandomCount());
+                try {
+                    Thread.sleep(300);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
     }
 
-    public static class Person {
+    public static class Person implements Runnable {
 
+        @Override
+        public void run() {
+            while (!isStopped){
+            drugsController.sell(getRandomDrug(),getRandomCount());
+            try {
+                Thread.sleep(100);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            }
+        }
     }
 
     public static int getRandomCount() {

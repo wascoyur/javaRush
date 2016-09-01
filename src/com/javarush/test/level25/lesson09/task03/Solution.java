@@ -14,4 +14,11 @@ public class Solution implements Thread.UncaughtExceptionHandler {
     @Override
     public void uncaughtException(Thread t, Throwable e) {
     }
+<<<<<<< HEAD
+
+    interface UncaughtExceptionHandler {
+
+    }
+=======
+>>>>>>> origin/master
 }

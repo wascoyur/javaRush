@@ -9,7 +9,8 @@ public class Drug {
     }
 
     public void setName(String name) {
-        this.name = name;
+        synchronized (this){this.name = name;}
+
     }
 
     public String getDescription() {
@@ -17,6 +18,6 @@ public class Drug {
     }
 
     public void setDescription(String description) {
-        this.description = description;
+        synchronized (this){this.description = description;}
     }
 }

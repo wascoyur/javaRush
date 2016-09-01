@@ -1,5 +1,5 @@
 package com.javarush.test.level22.lesson13.task03;
-
+//todo: Rgex learn
 /* Проверка номера телефона
 Метод checkTelNumber должен проверять, является ли аргумент telNumber валидным номером телефона.
 Критерии валидности:
@@ -26,6 +26,7 @@ package com.javarush.test.level22.lesson13.task03;
 public class Solution {
 
     public static boolean checkTelNumber(String telNumber) {
+
         return false;
     }
 }

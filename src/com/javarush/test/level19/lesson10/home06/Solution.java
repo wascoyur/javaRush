@@ -1,6 +1,13 @@
 package com.javarush.test.level19.lesson10.home06;
 
+<<<<<<< HEAD
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+=======
 import java.io.*;
+>>>>>>> origin/master
 import java.util.HashMap;
 import java.util.Map;
 
@@ -40,6 +47,24 @@ public class Solution {
         map.put(11, "одиннадцать");
         map.put(12, "двенадцать");
     }
+<<<<<<< HEAD
+
+    public static void main(String[] args) throws IOException {
+        BufferedReader rfn = new BufferedReader(new FileReader("d:\\f1"));
+        while (rfn.ready()) {
+            String s = rfn.readLine();
+            String[] sMass = s.replaceAll("\\p{Punct}", " ").split(" ");
+            for (String x: sMass) {
+                for (int i = 0; i < map.size() - 1; i++){
+                    int xConv = Integer.parseInt(x);
+//                    if (map.))) {
+                        s = s.replaceFirst(x, map.get(i));
+                    }
+                }
+
+            }
+            System.out.println();
+=======
 
     public static void main(String[] args) throws IOException {
 //        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -60,7 +85,7 @@ public class Solution {
                 System.out.print(c);
             }
 
+>>>>>>> origin/master
         }
 
-    }
 }

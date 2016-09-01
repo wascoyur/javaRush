@@ -60,7 +60,11 @@ public class Solution {
         public Runner(String name, double speed) {
             this.name = name;
             this.speed = speed;
+<<<<<<< HEAD
+            this.stopwatch = new Stopwatch(this);
+=======
             this.stopwatch = new Stopwatch(this);//
+>>>>>>> origin/master
         }
 
         public String getName() {
@@ -73,7 +77,11 @@ public class Solution {
         }
 
         public void start() {
+<<<<<<< HEAD
+            stopwatch.start();
+=======
             stopwatch.start();//запускается секундомер личный для бегуна
+>>>>>>> origin/master
         }
     }
 }
