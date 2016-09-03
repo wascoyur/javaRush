@@ -20,9 +20,11 @@ public class Solution {
     public static List<Pair> result = new LinkedList<>();
 
     public static void main(String[] args) throws IOException {
-        String f = "d:\\f1";
-        Map<String,String> map = new HashMap<>();
-        ArrayList<String> clone = new ArrayList<>();
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String f = br.readLine();
+        Map<String,String> map = new LinkedHashMap<>();
+        List<String> clone = new LinkedList<>();
         BufferedReader redFile = new BufferedReader(new FileReader(f));
         char[] ch = new char[(int) new File(f).length()];
         redFile.read(ch,0,((int) new File(f).length()));
@@ -31,10 +33,12 @@ public class Solution {
         for (int i = 0; i < array.length; i++) {
             String t = array[i].replaceAll("\\p{Cntrl}", "");
             array[i] = t;
-            }
+        }
         Collections.addAll(clone, array);
         for (String x : clone) {
-            map.put(x, null);
+            String tm = x;
+            boolean ss = tm.matches("\\W");
+            if (tm.equals(tm.matches("\\w"))){map.put(x, null);}
         }
 
         Iterator<String> x = clone.iterator();
@@ -47,19 +51,30 @@ public class Solution {
                 x.remove();
             }
         }
-        Collection<String> collection;
-        for (String ignored : collection){
-            if (ignored == null) ignored.//todo: удалить ключи с нулл-значениями.
+        Collection<String> collection = map.values() ;
+        Iterator<String> iterCol = collection.iterator(); //удаление пустых значений в мапе.
+        while (iterCol.hasNext()) {
+            String o = iterCol.next();
+            if (o == null) iterCol.remove();
         }
+
+
         for (Map.Entry<String, String> pair : map.entrySet()) {
-            if (pair.getValue() == null)
+            Pair p = new Pair(pair.getKey(), pair.getValue());
+            result.add(p);
+        }
+        for (Pair z : result) {
+            System.out.println(z);
         }
         System.out.println();
+
+    }
+    public static class Pair {
+        public Pair(String first, String second) {
+            this.first = first;
+            this.second = second;
         }
 
-
-
-    public static class Pair {
         String first;
         String second;
 
@@ -67,8 +82,8 @@ public class Solution {
         public String toString() {
             return  first == null && second == null ? "" :
                     first == null && second != null ? second :
-                    second == null && first != null ? first :
-                    first.compareTo(second) < 0 ? first + " " + second : second + " " + first;
+                            second == null && first != null ? first :
+                                    first.compareTo(second) < 0 ? first + " " + second : second + " " + first;
 
         }
     }

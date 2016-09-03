@@ -19,7 +19,6 @@ import java.util.regex.Pattern;
 
 public class Solution {
     public static void main(String[] args) throws IOException {
-<<<<<<< HEAD
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String fName = br.readLine();
         String out = br.readLine();
@@ -43,7 +42,6 @@ public class Solution {
         rf.close();
         bw.close();
     }
-=======
 //        BufferedReader rfName = new BufferedReader(new InputStreamReader(System.in));
 //        String firsName = rfName.readLine();
 //        String secondName = rfName.readLine();
@@ -56,6 +54,5 @@ public class Solution {
 //        tmp = (String.valueOf(ch)).replaceAll("");
         System.out.println(ch);
         }
->>>>>>> origin/master
 }
 

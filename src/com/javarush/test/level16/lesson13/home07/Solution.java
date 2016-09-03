@@ -80,7 +80,6 @@ public class Solution {
         @Override
         public void run() {
             //Add your code here - добавь код тут
-<<<<<<< HEAD
             int perid = 1000/(Gamer.this.rating);//период выполнения одного хода
             int rate = Gamer.this.rating;
             for (int i = 0; i < OnlineGame.steps.size() && i <= rate  ; i++) {
@@ -96,7 +95,6 @@ public class Solution {
             OnlineGame.isWinnerFound = true;
 
         }
-=======
             int rate = Math.round(1000/this.rating);
             try {
                 for (int i = 0; i < OnlineGame.steps.size(); i++){
@@ -111,6 +109,5 @@ public class Solution {
                 }
             }
        }
->>>>>>> origin/master
     }
 

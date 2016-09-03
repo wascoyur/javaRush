@@ -5,12 +5,9 @@ import java.util.TreeSet;
 
 /* Был бы ум - будет и успех.
 Солдаты всегда строились, строятся и будут строиться по убыванию роста.
-<<<<<<< HEAD
 Отсортируйте солдат, предварительно подумав, что лучше использовать при таких условиях - Comparable или Comparator.
-=======
 Отсортируйте солдат, предварительно подумав,
 что лучше использовать при таких условиях - Comparable или Comparator.
->>>>>>> origin/master
 */
 public class Solution {
     public static void main(String[] args) {
@@ -24,11 +21,8 @@ public class Solution {
         }
     }
 
-<<<<<<< HEAD
     public static class Soldier implements Comparable {
-=======
     public static class Soldier implements Comparable<Soldier>{
->>>>>>> origin/master
         private String name;
         private int height;
 
@@ -38,14 +32,11 @@ public class Solution {
         }
 
         @Override
-<<<<<<< HEAD
         public int compareTo(Object o) {
             Soldier tmp = (Soldier)o;
             return this.height -(tmp.height);
-=======
         public int compareTo(Soldier o) {
             return o.height - this.height;
->>>>>>> origin/master
         }
     }
 }
