@@ -2,88 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0e953738-3cef-4ed6-ae01-aaa519eb94a6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/javarush/test/level22/lesson05/task02/tmp/Solution.java" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level24\Exampls\BasketCats.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level24\lesson02\home01\SelfInterfaceMarker.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level24\lesson02\home01\SelfInterfaceMarkerImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level24\lesson02\home01\Solution.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level24\lesson02\home01\Util.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level24\lesson02\task01\Solution.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level24\lesson02\task02\Solution.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level24\lesson04\home02\Action.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level24\lesson04\home02\FirstClass.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level24\lesson04\home02\SecondClass.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level24\lesson04\home02\Solution.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level24\lesson04\task01\Solution.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level24\lesson06\home01\Cat.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level24\lesson06\home01\Mouse.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level24\lesson06\home01\Pet.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level24\lesson06\home01\Sayable.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level24\lesson06\home01\Solution.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level24\lesson06\home01\Util.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level24\lesson06\home02\Dog.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level24\lesson06\home02\Mouse.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level24\lesson06\home02\Pet.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level24\lesson06\home02\Sayable.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level24\lesson06\home02\Solution.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level24\lesson06\home02\SuperDog.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level24\lesson06\home02\Util.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level24\lesson06\home03\Solution.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level24\lesson06\home03\Util.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level24\lesson09\home01\Iterator.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level24\lesson09\home01\Solution.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level24\lesson09\task01\Solution.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level24\lesson09\task02\Solution.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level24\lesson14\big01\Arcanoid.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level24\lesson14\big01\Ball.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level24\lesson14\big01\BaseObject.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level24\lesson14\big01\Brick.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level24\lesson14\big01\Canvas.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level24\lesson14\big01\Stand.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level24\lesson14\big01\Условие задачи.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level25\lesson02\home01\Column.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level25\lesson02\home01\Columnable.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level25\lesson02\home01\Solution.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level25\lesson02\task01\Solution.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level25\lesson02\task02\Solution.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level25\lesson05\home01\LoggingStateThread.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level25\lesson05\home01\Solution.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level25\lesson05\task01\Solution.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level25\lesson05\task02\Solution.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level25\lesson07\home01\CustomThreadManipulator.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level25\lesson07\home01\Solution.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level25\lesson07\home01\TaskManipulator.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level25\lesson07\home02\CancellableTask.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level25\lesson07\home02\SocketTask.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level25\lesson07\home02\Solution.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level25\lesson07\task01\Solution.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level25\lesson09\task01\Solution.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level25\lesson09\task02\Solution.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level25\lesson09\task03\Solution.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level25\lesson11\task01\Solution.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level25\lesson11\task02\Solution.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level25\lesson16\big01\BaseObject.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level25\lesson16\big01\Bomb.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level25\lesson16\big01\Canvas.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level25\lesson16\big01\KeyboardObserver.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level25\lesson16\big01\Rocket.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level25\lesson16\big01\Space.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level25\lesson16\big01\SpaceShip.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level25\lesson16\big01\Ufo.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level25\lesson16\big01\Условие задачи.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level25\tmp\App.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Documents_Vasiliev\Java\JavaProject\JavaRushHomeWork\src\com\javarush\test\level25\tmp\AppThread.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level16/lesson13/bonus01/ImageReaderFactory.java" afterPath="$PROJECT_DIR$/src/com/javarush/test/level16/lesson13/bonus01/ImageReaderFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaRushHomeWork.iml" afterPath="$PROJECT_DIR$/JavaRushHomeWork.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level16/lesson13/home07/Solution.java" afterPath="$PROJECT_DIR$/src/com/javarush/test/level16/lesson13/home07/Solution.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level19/lesson05/task03/Solution.java" afterPath="$PROJECT_DIR$/src/com/javarush/test/level19/lesson05/task03/Solution.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level19/lesson10/home06/Solution.java" afterPath="$PROJECT_DIR$/src/com/javarush/test/level19/lesson10/home06/Solution.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level20/lesson02/task01/Solution.java" afterPath="$PROJECT_DIR$/src/com/javarush/test/level20/lesson02/task01/Solution.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level20/lesson10/bonus02/Solution.java" afterPath="$PROJECT_DIR$/src/com/javarush/test/level20/lesson10/bonus02/Solution.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level22/lesson05/task01/Solution.java" afterPath="$PROJECT_DIR$/src/com/javarush/test/level22/lesson05/task01/Solution.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level22/lesson05/task02/Solution.java" afterPath="$PROJECT_DIR$/src/com/javarush/test/level22/lesson05/task02/Solution.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level22/lesson09/task01/Solution.java" afterPath="$PROJECT_DIR$/src/com/javarush/test/level22/lesson09/task01/Solution.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level26/lesson02/task02/Solution.java" afterPath="$PROJECT_DIR$/src/com/javarush/test/level26/lesson02/task02/Solution.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="e2c795df-6703-4e29-a097-4663f64a84cc" name="добавление Джава Раш (cherry picked from commit 8c61cc5)" comment="добавление Джава Раш&#10;(cherry picked from commit 8c61cc5)" />
@@ -140,8 +59,8 @@
       <file leaf-file-name="Solution.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level22/lesson05/task01/Solution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.4381552" vertical-offset="238" max-vertical-offset="1100">
-              <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.109913796" vertical-offset="301" max-vertical-offset="1122">
+              <caret line="16" column="64" selection-start-line="16" selection-start-column="64" selection-end-line="16" selection-end-column="64" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -920,7 +839,7 @@
       <workItem from="1471064153414" duration="13169000" />
       <workItem from="1472810521752" duration="133000" />
       <workItem from="1472810798251" duration="21230000" />
-      <workItem from="1472879130416" duration="8973000" />
+      <workItem from="1472879130416" duration="9810000" />
     </task>
     <task id="LOCAL-00001" summary="Удалены как мне кажется старые конфиги">
       <created>1466334717957</created>
@@ -982,11 +901,17 @@
       <option name="project" value="LOCAL" />
       <updated>1472810620638</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="После очередного ковыряния.">
+      <created>1472900745298</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1472900745298</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="306514000" />
+    <option name="totallyTimeSpent" value="307351000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1072,7 +997,8 @@
     <MESSAGE value="как чертить прямоугольник?" />
     <MESSAGE value="Удалить нулл значения&#10;(cherry picked from commit d55ec80)" />
     <MESSAGE value="Bones" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bones" />
+    <MESSAGE value="После очередного ковыряния." />
+    <option name="LAST_COMMIT_MESSAGE" value="После очередного ковыряния." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1324,13 +1250,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/javarush/test/level22/lesson05/task01/Solution.java</url>
-          <line>26</line>
+          <line>27</line>
           <properties />
           <option name="timeStamp" value="168" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/javarush/test/level22/lesson05/task01/Solution.java</url>
-          <line>41</line>
+          <line>42</line>
           <properties />
           <option name="timeStamp" value="171" />
         </line-breakpoint>
@@ -1691,6 +1617,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3090909" vertical-offset="0" max-vertical-offset="550">
           <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1729,8 +1656,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level22/lesson05/task01/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.4381552" vertical-offset="238" max-vertical-offset="1100">
-          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.109913796" vertical-offset="301" max-vertical-offset="1122">
+          <caret line="16" column="64" selection-start-line="16" selection-start-column="64" selection-end-line="16" selection-end-column="64" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

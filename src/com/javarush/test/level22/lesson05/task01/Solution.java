@@ -14,8 +14,9 @@ import java.util.Collections;
 */
 public class Solution {
     public static String getPartOfString(String string) {
-        try {
+        try {//todo: собирает также и точку в конце предложения.
             String[] str = string.split(" ");
+            if (str.length < 5)throw new TooShortStringException();
             ArrayList<String> list = new ArrayList<>();
             Collections.addAll(list, str);
             String sb = "";
@@ -38,7 +39,7 @@ public class Solution {
     }
 
         public static void main(String[] args) {
-            String dot = null;
-            getPartOfString(dot);
+            String dot = " лучший сервис обучения Java.";
+            System.out.println(getPartOfString(dot));
         }
 }
