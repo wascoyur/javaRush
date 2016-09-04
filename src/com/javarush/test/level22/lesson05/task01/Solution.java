@@ -14,24 +14,30 @@ import java.util.Collections;
 */
 public class Solution {
     public static String getPartOfString(String string) throws TooShortStringException {
-            if (string == null) throw new TooShortStringException();
-            String[] str = string.split(" ");
-            if (str.length <= 4)throw new TooShortStringException();
-            ArrayList<String> list = new ArrayList<>();
-            Collections.addAll(list, str);
-            String sb = "";
-            for (String x : list) {
-                int pos = list.indexOf(x);
-                if (pos >= 1 & pos <= 4) sb = sb + x + " ";
-            }
-            sb = sb.trim();
-            return sb;
+        if (string == null) throw new TooShortStringException();
+        String[] str = string.split("\\b\\b");
+        if (str.length <= 4)throw new TooShortStringException();
+        ArrayList<String> list = new ArrayList<>();
+        Collections.addAll(list, str);
+        String sb = "";
+        for (String x : list) {
+            int pos = list.indexOf(x);
+            if (pos >= 1 & pos <= 4){
+                    sb = sb + x;
+                    if (!x.equals(" ")){
+                        sb =sb + " ";
+                    }
+                }
+        }
+//        int l = str.length;
+//        if (str[l-1].equals(' '))return sb;
+//        sb = sb.trim();
+        return sb;
     }
 
     public static class TooShortStringException extends Exception{
     }
         public static void main(String[] args) throws TooShortStringException {
-            String dot = "JavaRush - лучший сервис обучения Java.";
-            System.out.print(getPartOfString(dot));
+            System.out.print(getPartOfString("JavaRush - лучший сервис обучения Java"));
         }
 }
