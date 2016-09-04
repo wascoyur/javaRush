@@ -13,10 +13,10 @@ import java.util.Collections;
 Метод main не участвует в тестировании.
 */
 public class Solution {
-    public static String getPartOfString(String string) {
-        try {//todo: собирает также и точку в конце предложения.
+    public static String getPartOfString(String string) throws TooShortStringException {
+            if (string == null) throw new TooShortStringException();
             String[] str = string.split(" ");
-            if (str.length < 5)throw new TooShortStringException();
+            if (str.length <= 4)throw new TooShortStringException();
             ArrayList<String> list = new ArrayList<>();
             Collections.addAll(list, str);
             String sb = "";
@@ -26,20 +26,12 @@ public class Solution {
             }
             sb = sb.trim();
             return sb;
-        } catch (Exception e) {
-            try {
-                throw new TooShortStringException();
-            } catch (TooShortStringException e1) {
-                return null;
-            }
-        }
     }
 
     public static class TooShortStringException extends Exception{
     }
-
-        public static void main(String[] args) {
-            String dot = " лучший сервис обучения Java.";
-            System.out.println(getPartOfString(dot));
+        public static void main(String[] args) throws TooShortStringException {
+            String dot = "JavaRush - лучший сервис обучения Java.";
+            System.out.print(getPartOfString(dot));
         }
 }

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0e953738-3cef-4ed6-ae01-aaa519eb94a6" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/javarush/test/level22/lesson05/task01/tmp/StringDemo.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level22/lesson05/task01/Solution.java" afterPath="$PROJECT_DIR$/src/com/javarush/test/level22/lesson05/task01/Solution.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -59,11 +60,21 @@
       <file leaf-file-name="Solution.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level22/lesson05/task01/Solution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.109913796" vertical-offset="301" max-vertical-offset="1122">
-              <caret line="16" column="64" selection-start-line="16" selection-start-column="64" selection-end-line="16" selection-end-column="64" />
+            <state vertical-scroll-proportion="0.85081965" vertical-offset="209" max-vertical-offset="1118">
+              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StringDemo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level22/lesson05/task01/tmp/StringDemo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="424" max-vertical-offset="861">
+              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -92,7 +103,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/javarush/test/level21/lesson16/big01/Horse.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level21/lesson16/big01/Hippodrome.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/Canvas.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level22/lesson18/big01/Field.java" />
@@ -142,6 +152,7 @@
         <option value="$PROJECT_DIR$/src/com/javarush/test/level22/lesson05/task02/tmp/Solution.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level22/lesson05/task02/Solution.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level22/lesson09/task01/Solution.java" />
+        <option value="$PROJECT_DIR$/src/com/javarush/test/level22/lesson05/task01/tmp/StringDemo.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level22/lesson05/task01/Solution.java" />
       </list>
     </option>
@@ -180,7 +191,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -342,9 +352,48 @@
               <option name="myItemId" value="lesson05" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="task01" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JavaRushHomeWork" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JavaRushHomeWork" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="level22" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lesson05" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="task01" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tmp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -403,28 +452,6 @@
       </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Debug" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Solution (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.javarush.test.level20.lesson10.bonus02.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="com.javarush.test.level20.lesson10.bonus02.Solution" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="JavaRushHomeWork" />
-      <envs />
-      <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
@@ -492,6 +519,34 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="com.javarush.test.level22.lesson05.task01.Solution" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="JavaRushHomeWork" />
+      <envs />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="StringDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.javarush.test.level22.lesson05.task01.tmp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.javarush.test.level22.lesson05.task01.tmp.StringDemo" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -758,18 +813,18 @@
       <item index="1" class="java.lang.String" itemvalue="Application.Unnamed" />
       <item index="2" class="java.lang.String" itemvalue="Application.Solution" />
       <item index="3" class="java.lang.String" itemvalue="Application.Solution (2)" />
-      <item index="4" class="java.lang.String" itemvalue="Application.Solution (3)" />
-      <item index="5" class="java.lang.String" itemvalue="Application.Solution (4)" />
-      <item index="6" class="java.lang.String" itemvalue="Application.Solution (5)" />
-      <item index="7" class="java.lang.String" itemvalue="Application.Solution (6)" />
+      <item index="4" class="java.lang.String" itemvalue="Application.Solution (4)" />
+      <item index="5" class="java.lang.String" itemvalue="Application.Solution (5)" />
+      <item index="6" class="java.lang.String" itemvalue="Application.Solution (6)" />
+      <item index="7" class="java.lang.String" itemvalue="Application.StringDemo" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Application.Solution (6)" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Solution (2)" />
-        <item index="2" class="java.lang.String" itemvalue="Application.Solution (4)" />
-        <item index="3" class="java.lang.String" itemvalue="Application.Solution (5)" />
-        <item index="4" class="java.lang.String" itemvalue="Application.Solution (3)" />
+        <item index="1" class="java.lang.String" itemvalue="Application.StringDemo" />
+        <item index="2" class="java.lang.String" itemvalue="Application.Solution (2)" />
+        <item index="3" class="java.lang.String" itemvalue="Application.Solution (4)" />
+        <item index="4" class="java.lang.String" itemvalue="Application.Solution (5)" />
       </list>
     </recent_temporary>
   </component>
@@ -839,7 +894,8 @@
       <workItem from="1471064153414" duration="13169000" />
       <workItem from="1472810521752" duration="133000" />
       <workItem from="1472810798251" duration="21230000" />
-      <workItem from="1472879130416" duration="9810000" />
+      <workItem from="1472879130416" duration="9849000" />
+      <workItem from="1472963480441" duration="5423000" />
     </task>
     <task id="LOCAL-00001" summary="Удалены как мне кажется старые конфиги">
       <created>1466334717957</created>
@@ -907,11 +963,17 @@
       <option name="project" value="LOCAL" />
       <updated>1472900745298</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="точка">
+      <created>1472901469933</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1472901469933</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="307351000" />
+    <option name="totallyTimeSpent" value="312813000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -937,7 +999,7 @@
     <frame x="-9" y="-9" width="1298" height="1042" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4117647" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24336794" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33102652" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -952,14 +1014,14 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25836217" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18048781" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.0601626" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15203252" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42445213" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32410613" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2495935" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -998,7 +1060,8 @@
     <MESSAGE value="Удалить нулл значения&#10;(cherry picked from commit d55ec80)" />
     <MESSAGE value="Bones" />
     <MESSAGE value="После очередного ковыряния." />
-    <option name="LAST_COMMIT_MESSAGE" value="После очередного ковыряния." />
+    <MESSAGE value="точка" />
+    <option name="LAST_COMMIT_MESSAGE" value="точка" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1249,16 +1312,22 @@
           <option name="timeStamp" value="166" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/javarush/test/level22/lesson05/task01/Solution.java</url>
-          <line>27</line>
+          <url>file://$PROJECT_DIR$/src/com/javarush/test/level22/lesson05/task01/tmp/StringDemo.java</url>
+          <line>11</line>
           <properties />
-          <option name="timeStamp" value="168" />
+          <option name="timeStamp" value="173" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/javarush/test/level22/lesson05/task01/tmp/StringDemo.java</url>
+          <line>25</line>
+          <properties />
+          <option name="timeStamp" value="174" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/javarush/test/level22/lesson05/task01/Solution.java</url>
-          <line>42</line>
+          <line>16</line>
           <properties />
-          <option name="timeStamp" value="171" />
+          <option name="timeStamp" value="176" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-field">
           <url>file://$PROJECT_DIR$/src/com/javarush/test/level16/lesson13/bonus03/Solution.java</url>
@@ -1270,7 +1339,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="172" />
+      <option name="time" value="177" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1279,13 +1348,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level17/lesson10/home07/ApplicationContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6636481" vertical-offset="81" max-vertical-offset="918">
-          <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level17/lesson10/home07/Bean.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.055979643" vertical-offset="0" max-vertical-offset="786">
@@ -1617,7 +1679,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3090909" vertical-offset="0" max-vertical-offset="550">
           <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1654,10 +1715,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level22/lesson05/task01/tmp/StringDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="424" max-vertical-offset="861">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level22/lesson05/task01/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.109913796" vertical-offset="301" max-vertical-offset="1122">
-          <caret line="16" column="64" selection-start-line="16" selection-start-column="64" selection-end-line="16" selection-end-column="64" />
+        <state vertical-scroll-proportion="0.85081965" vertical-offset="209" max-vertical-offset="1118">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1756,10 +1825,10 @@
     <option name="map">
       <map>
         <entry key="flags" value="0" />
-        <entry key="mode" value="0" />
-        <entry key="regex" value="(\w)" />
+        <entry key="mode" value="2" />
+        <entry key="regex" value="(\b\b)||( )" />
         <entry key="replacement" value="" />
-        <entry key="text" value="фср рсф оп &#10;оп по лом мол д д д &#10;еж еж еж еж &#10;уж же&#10;fgh hgf hgf fg fg fg gf gf gf - здесь только 2 пары&#10;fgh" />
+        <entry key="text" value=" лучший сервис обучения Java." />
       </map>
     </option>
   </component>
