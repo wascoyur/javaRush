@@ -6,15 +6,23 @@ package com.javarush.test.level22.lesson18.big01;
 public class Field {
     int width;
     int height;
-    int [][] matrix;
+    int[][] matrix;
 
     public Field(int width, int height, int[][] matrix) {
         this.width = width;
         this.height = height;
-        this.matrix = new int[height][width];
+        this.matrix = matrix;
     }
+    public void print(){}
+    public void removeFullLines(){}
+    public  Integer getValue(int x, int y){
+        return null;
+    }
+    public  void setValue(int x, int y, int value){
 
+    }
     public int getWidth() {
+
         return width;
     }
 
@@ -25,14 +33,4 @@ public class Field {
     public int[][] getMatrix() {
         return matrix;
     }
-    void print(){// - объект будет отрисовывать на экран свое текущее состояние;
-        int height = 0; int width = 0;
-
-
-    }
-    void removeFullLines(){};// - будет удалять из матрицы полностью заполненные строки и сдвигать вышележащие строки вниз;
-    Integer getValue(int x, int y){return null;}// - возвращает значение которое находится в матрице с координатами x и y;
-    void setValue(int x, int y, int value){}// - устанавливает переданное значение в ячейку массива (матрицы
-
-
 }
