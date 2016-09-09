@@ -16,43 +16,29 @@ f 361
 */
 
 import java.io.*;
-import java.util.Iterator;
 import java.util.Map;
 import java.util.TreeMap;
 
 public class Solution {
     public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new FileReader(args[0]));
-        TreeMap<String, Integer> map = new TreeMap<>();
-
-        char[] ch = new char[(int) new File(args[0]).length()];
+        Map<Character, Integer> map = new TreeMap<>();
+        String file = args[0];
+        BufferedReader br = new BufferedReader(new FileReader(file));
+        char[] ch = new char[(int) new File(file).length()];
         br.read(ch);
-        for (char add : ch) {
-            String tmp = (String.valueOf(add));
-            if (tmp.matches("[A-z]"))map.put(tmp, null);
-        }
-
-        for (char x : ch) {
-            Iterator<Map.Entry<String, Integer>> iterator = map.entrySet().iterator();
-            while (iterator.hasNext()) {
-                Map.Entry<String,Integer> pair = iterator.next();
-                String key = pair.getKey();
-                Integer value = pair.getValue();
-                if (key.equals(String.valueOf(x))) {
-                    if (value == null){value = 1;} else value++;
-                    map.put(key, value);break;
-                }
+        for (Character x : ch) {
+            char y = x;
+            if ((map.containsKey(y))) {
+                map.put(y,(map.get(y) +1 ));
             }
-
+            else
+            map.put(y, 1);
         }
-        Iterator<Map.Entry<String, Integer>> iterator = map.entrySet().iterator();
-        while (iterator.hasNext()) {
-            Map.Entry<String,Integer> pair = iterator.next();
-            String key = pair.getKey();
-            Integer value = pair.getValue();
-            String pr = String.valueOf(value);
-            System.out.println(key +" " + pr);
+        for (Map.Entry<Character, Integer> pair : map.entrySet()) {
+            String key = String.valueOf(pair.getKey());
+            int count = pair.getValue();
+            System.out.println(key +" " + count);
         }
-
+        br.close();
     }
 }

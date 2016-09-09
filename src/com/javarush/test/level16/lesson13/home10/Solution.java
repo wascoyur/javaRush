@@ -1,6 +1,9 @@
 package com.javarush.test.level16.lesson13.home10;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 
 /* Последовательный вывод файлов
 1. Разберись, что делает программа.
@@ -20,19 +23,6 @@ import java.io.*;
 public class Solution {
     public static String firstFileName;
     public static String secondFileName;
-    static {
-<<<<<<< HEAD
-//        BufferedReader rf1 = new BufferedReader(new InputStreamReader(System.in));
-//        try {
-//           firstFileName = rf1.readLine();
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-=======
->>>>>>> origin/master
-        firstFileName = "d:\\f1";
-        secondFileName = "d:\\f2";
-    }
 
     public static void main(String[] args) throws InterruptedException {
         systemOutPrintln(firstFileName);
@@ -49,57 +39,11 @@ public class Solution {
     public static interface ReadFileInterface {
 
         void setFileName(String fullFileName);
-<<<<<<< HEAD
-=======
 
         String getFileContent();
 
         void join() throws InterruptedException;
 
         void start();
-    }
-
-    public static class ReadFileThread implements ReadFileInterface{
->>>>>>> origin/master
-
-        String getFileContent();
-
-        void join() throws InterruptedException;
-
-        void start();
-    }
-    public static class ReadFileThread implements ReadFileInterface{
-        @Override
-        public void setFileName(String fullFileName) {
-<<<<<<< HEAD
-
-=======
-            try {
-               BufferedReader readFile = new BufferedReader(new FileReader(firstFileName));
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-            }
->>>>>>> origin/master
-        }
-
-        @Override
-        public String getFileContent() {
-<<<<<<< HEAD
-=======
-            char[] ch = new char[(int) new File(firstFileName).length()];
->>>>>>> origin/master
-
-            return null;
-        }
-
-        @Override
-        public void join() throws InterruptedException {
-
-        }
-
-        @Override
-        public void start() {
-
-        }
     }
 }

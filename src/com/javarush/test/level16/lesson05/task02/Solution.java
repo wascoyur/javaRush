@@ -6,10 +6,12 @@ import java.util.List;
 /* Horse Racing
 Разберись, что делает программа.
 Реализуй метод calculateHorsesFinished. Он должен:
-1. Посчитать количество финишировавших лошадей и возвратить его. Используй метод isFinished().
+1. Посчитать количество финишировавших лошадей и возвратить его.
+Используй метод isFinished().
 2. Если лошадь еще не пришла к финишу (!isFinished()), то:
 2.1. Вывести в консоль "Waiting for " + horse.getName().
-2.2. Подождать, пока она завершит гонку. Подумай, какой метод нужно использовать для этого.
+2.2. Подождать, пока она завершит гонку.
+Подумай, какой метод нужно использовать для этого.
 */
 
 public class Solution {
@@ -18,12 +20,15 @@ public class Solution {
     public static void main(String[] args) throws InterruptedException {
         List<Horse> horses = prepareHorsesAndStart();
         while (calculateHorsesFinished(horses) != countHorses) {
+
         }
     }
 
     public static int calculateHorsesFinished(List<Horse> horses) throws InterruptedException {
         int countFinished = 0;
         //add your implementation here - добавь свою реалзацию тут
+        countFinished++;
+
         return countFinished;
     }
 
@@ -52,7 +57,7 @@ public class Solution {
         }
     }
 
-    public static List<Horse> prepareHorsesAndStart() { // создает коней и запускает их
+    public static List<Horse> prepareHorsesAndStart() {
         List<Horse> horses = new ArrayList<Horse>(countHorses);
         String number;
         for (int i = 1; i < countHorses + 1; i++) {
@@ -61,7 +66,7 @@ public class Solution {
         }
 
         for (int i = 0; i < countHorses; i++) {
-            horses.get(i).start();
+//            horses.get(i).start();
         }
         return horses;
     }

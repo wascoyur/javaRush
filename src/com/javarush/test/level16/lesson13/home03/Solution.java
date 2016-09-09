@@ -3,8 +3,8 @@ package com.javarush.test.level16.lesson13.home03;
 /* Рекурсивное создание нитей
 1. Измени класс GenerateThread так, чтобы он стал нитью.
 2. Создай конструктор GenerateThread, который должен:
-2.1. Вызвать конструктор суперкласса с параметром String - номером созданной нити.
-Используй countCreatedThreads.
+2.1. Вызвать конструктор суперкласса с параметром String -
+номером созданной нити. Используй countCreatedThreads.
 2.2. Запустить текущую нить.
 2.3. Номер первой нити должен начинается с 1.
 3. Переопредели метод toString, для этого внутри GenerateThread нажми Alt+Insert ->
@@ -19,28 +19,12 @@ Override Methods. Начни печатать toString.
 
 public class Solution {
     static int count = 15;
-    static volatile int countCreatedThreads = 1;
+    static volatile int countCreatedThreads;
 
     public static void main(String[] args) {
-        System.out.println(new GenerateThread(String.valueOf(countCreatedThreads)));
+        System.out.println(new GenerateThread());
     }
 
-    public static class GenerateThread extends Thread{
-        @Override
-        public String toString() {
-            return currentThread().getName() + " created";
-        }
-
-        public GenerateThread(String name) {
-            super(name);
-            run();
-        }
-
-        @Override
-        public void run() {
-
-            currentThread().run();
-        }
-
+    public static class GenerateThread {
     }
 }

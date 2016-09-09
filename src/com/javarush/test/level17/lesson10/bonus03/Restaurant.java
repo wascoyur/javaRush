@@ -6,9 +6,6 @@ package com.javarush.test.level17.lesson10.bonus03;
 Подсказка: это одна строчка
 */
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Restaurant {
     public static List<Thread> threads = new ArrayList<>();
 
