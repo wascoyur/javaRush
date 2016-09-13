@@ -7,7 +7,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 Сделайте так, чтобы оба метода могли выполняться одновременно двумя различными трэдами.
 synchronized(this) для этого не подходит, используйте другой объект для лока.
 */
-public class Solution extends AtomicInteger {
+public class Solution {
     int var1;
     int var2;
     int var3;
@@ -21,11 +21,14 @@ public class Solution extends AtomicInteger {
     }
 
     public int getSumOfVar1AndVar2() {
-        return var1 + var2;
+        AtomicInteger aVar1 = new AtomicInteger(this.var1);
+        int out = aVar1.getAndAdd(this.var2);
+        return out;
     }
 
     public int getSumOfVar3AndVar4() {
-        return var3 + var4;
+        AtomicInteger aVar3 = new AtomicInteger(this.var3);
+        int out2 = aVar3.getAndAdd(this.var4);
+        return out2;
     }
-
 }
