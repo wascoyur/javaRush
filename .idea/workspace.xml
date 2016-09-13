@@ -2,19 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0e953738-3cef-4ed6-ae01-aaa519eb94a6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/javarush/test/level24/lesson09/home01/Iterator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/javarush/test/level26/lesson10/home01/Producer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/javarush/test/level24/lesson02/home01/SelfInterfaceMarker.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/javarush/test/level24/lesson02/home01/SelfInterfaceMarkerImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/javarush/test/level24/lesson04/task01/Solution.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/javarush/test/level24/lesson09/home01/Solution.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/javarush/test/level24/lesson09/task01/Solution.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/javarush/test/level25/lesson05/task01/Solution.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/javarush/test/level25/lesson07/task01/Solution.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/javarush/test/level25/lesson09/task02/Solution.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/javarush/test/level25/lesson11/task01/Solution.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/javarush/test/level26/lesson05/task02/Solution.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/javarush/test/level26/lesson10/home01/Solution.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="e2c795df-6703-4e29-a097-4663f64a84cc" name="добавление Джава Раш (cherry picked from commit 8c61cc5)" comment="добавление Джава Раш&#10;(cherry picked from commit 8c61cc5)" />
@@ -996,7 +983,7 @@
       <workItem from="1473339829241" duration="10942000" />
       <workItem from="1473406821053" duration="18506000" />
       <workItem from="1473483256524" duration="13267000" />
-      <workItem from="1473763700385" duration="16065000" />
+      <workItem from="1473763700385" duration="16101000" />
     </task>
     <task id="LOCAL-00001" summary="Удалены как мне кажется старые конфиги">
       <created>1466334717957</created>
@@ -1142,11 +1129,17 @@
       <option name="project" value="LOCAL" />
       <updated>1473506404307</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="save">
+      <created>1473786793753</created>
+      <option name="number" value="00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1473786793753</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="392824000" />
+    <option name="totallyTimeSpent" value="392860000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1228,7 +1221,6 @@
     <MESSAGE value="main" />
     <MESSAGE value="nextTask" />
     <MESSAGE value="Печать должна быть здесь, т.е. остальной код только формирует данные, не печатает." />
-    <MESSAGE value="save" />
     <MESSAGE value="как чертить прямоугольник?" />
     <MESSAGE value="Удалить нулл значения&#10;(cherry picked from commit d55ec80)" />
     <MESSAGE value="Bones" />
@@ -1244,7 +1236,8 @@
     <MESSAGE value="18/10/6 Встречаемость символов решена." />
     <MESSAGE value="17/10/b03 решено" />
     <MESSAGE value="22/09/01 надо вычистить мапу от дубликатов" />
-    <option name="LAST_COMMIT_MESSAGE" value="22/09/01 надо вычистить мапу от дубликатов" />
+    <MESSAGE value="save" />
+    <option name="LAST_COMMIT_MESSAGE" value="save" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
