@@ -1,6 +1,4 @@
 package com.javarush.test.level19.lesson03.task03;
-import java.util.HashMap;
-import java.util.Map;
 
 /* Адаптация нескольких интерфейсов
 Адаптировать IncomeData к Customer и Contact.
@@ -13,6 +11,9 @@ CA Canada
 Обратите внимание на формат вывода фамилии и имени человека
 */
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Solution {
     public static Map<String, String> countries = new HashMap<String, String>();
     static {
@@ -20,35 +21,35 @@ public class Solution {
         countries.put("RU","Russia");
         countries.put("CA","Canada");
     }
-
     public static class IncomeDataAdapter implements Customer, Contact{
+        private Customer customer;
+        private Contact contact;
+
+        public IncomeDataAdapter(Customer customer, Contact contact) {
+            this.customer = customer;
+            this.contact = contact;
+
+        }
+
         @Override
         public String getName() {
-            return incomeData.getContactLastName() + ", " + incomeData.getContactFirstName();
+            return null;
         }
 
         @Override
         public String getPhoneNumber() {
-            String s = String.valueOf(incomeData.getPhoneNumber());
-//todo: сделать форматирование
-            return String.valueOf(System.out.format("%s", s));
+            return null;
         }
 
         @Override
         public String getCompanyName() {
-            return incomeData.getCompany();
+            return null;
         }
 
         @Override
         public String getCountryName() {
-            return countries.get("RU");
+            return null;
         }
-
-        private IncomeData incomeData;
-        IncomeDataAdapter(IncomeData incomeData){
-            this.incomeData = incomeData;
-        }
-
     }
 
     public static interface IncomeData {
@@ -75,10 +76,5 @@ public class Solution {
         String getName();               //example Ivanov, Ivan
 
         String getPhoneNumber();        //example +38(050)123-45-67
-    }
-
-    public static void main(String[] args) {
-        Solution sol = new Solution();
-
     }
 }

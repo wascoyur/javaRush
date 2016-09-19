@@ -19,7 +19,6 @@ public class Solution {
         //на старт!
         //внимание!
         //марш!
-
         ivanov.start();
         petrov.start();
         Thread.sleep(2000);
@@ -47,7 +46,7 @@ public class Solution {
         private void doSeveralSteps() throws InterruptedException {
             stepNumber++;
             //add your code here - добавь код тут
-
+            Thread.sleep((long) (1000/owner.getSpeed()));
             System.out.println(owner.getName() + " делает шаг №" + stepNumber + "!");
         }
     }
@@ -60,11 +59,7 @@ public class Solution {
         public Runner(String name, double speed) {
             this.name = name;
             this.speed = speed;
-<<<<<<< HEAD
             this.stopwatch = new Stopwatch(this);
-=======
-            this.stopwatch = new Stopwatch(this);//
->>>>>>> origin/master
         }
 
         public String getName() {
@@ -72,16 +67,11 @@ public class Solution {
         }
 
         public double getSpeed() {
-
             return speed;
         }
 
         public void start() {
-<<<<<<< HEAD
             stopwatch.start();
-=======
-            stopwatch.start();//запускается секундомер личный для бегуна
->>>>>>> origin/master
         }
     }
 }
