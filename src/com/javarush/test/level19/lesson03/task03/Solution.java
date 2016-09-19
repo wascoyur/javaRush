@@ -22,23 +22,26 @@ public class Solution {
         countries.put("CA","Canada");
     }
     public static class IncomeDataAdapter implements Customer, Contact{
-        private Customer customer;
-        private Contact contact;
+        private IncomeData data;
 
-        public IncomeDataAdapter(Customer customer, Contact contact) {
-            this.customer = customer;
-            this.contact = contact;
+        public IncomeDataAdapter(IncomeData data) {
+            this.data = data;
 
         }
 
         @Override
         public String getName() {
-            return null;
+            String gN = data.getContactFirstName()+" "+data.getContactLastName();
+            return gN;
         }
 
         @Override
         public String getPhoneNumber() {
-            return null;
+            String gPh = String.valueOf(data.getPhoneNumber());
+//            String.format()
+
+//            gPh = gPh.
+            return gPh;
         }
 
         @Override
