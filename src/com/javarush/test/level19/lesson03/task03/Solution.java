@@ -53,6 +53,8 @@ public class Solution {
         public String getCountryName() {
             return null;
         }
+
+    public static class IncomeDataAdapter {
     }
 
     public static interface IncomeData {
