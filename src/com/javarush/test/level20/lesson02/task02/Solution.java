@@ -1,6 +1,7 @@
 package com.javarush.test.level20.lesson02.task02;
 
 import java.io.*;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,11 +16,19 @@ public class Solution {
         //вы можете найти your_file_name.tmp в папке TMP или исправьте outputStream/inputStream в соответствии с путем к вашему реальному файлу
         try {
             File your_file_name = File.createTempFile("your_file_name", null);
-            OutputStream outputStream = new FileOutputStream(your_file_name);
-            InputStream inputStream = new FileInputStream(your_file_name);
-
+            OutputStream outputStream = new FileOutputStream("d:\\f1");
+            InputStream inputStream = new FileInputStream("d:\\f1");
+            SimpleDateFormat date = new SimpleDateFormat("dd.mm.yyyy");
             JavaRush javaRush = new JavaRush();
             //initialize users field for the javaRush object here - инициализируйте поле users для объекта javaRush тут
+            User one = new User();
+            one.setFirstName("Ivan");one.setLastName("Ivanov");one.setBirthDate(date.parse("11.12.2000"));one.setMale(true); one.setCountry(User.Country.RUSSIA);
+            User two = new User();
+            two.setFirstName("Peter");two.setLastName("Petrow");two.setBirthDate(date.parse("22.02.2002"));two.setMale(false); two.setCountry(User.Country.OTHER);
+            javaRush.users.add(null);
+            javaRush.users.add(one);
+            javaRush.users.add(two);
+
             javaRush.save(outputStream);
             outputStream.flush();
 
@@ -44,10 +53,42 @@ public class Solution {
 
         public void save(OutputStream outputStream) throws Exception {
             //implement this method - реализуйте этот метод
+            PrintWriter pr = new PrintWriter(outputStream);
+            SimpleDateFormat sdf = new SimpleDateFormat("dd.mm.yyyy");
+            for (User x : users) {
+                pr.println("@");
+                if (x != null) {
+                    if (x.getFirstName()!= null){pr.println(x.getFirstName());}else {pr.println("--");}
+                    if (x.getLastName()!= null){pr.println(x.getLastName());}else {pr.println("--");}
+                    if (x.getBirthDate()!= null){pr.println(sdf.format(x.getBirthDate()));}else {pr.println("--");}
+                    if (x.isMale()== true){pr.println("true");} else pr.println("--");
+                    if (x.getCountry()!= null){pr.println(x.getCountry());}else {pr.println("--");}
+                }
+
+            }
+            pr.flush();
+            pr.close();
         }
 
         public void load(InputStream inputStream) throws Exception {
             //implement this method - реализуйте этот метод
+            BufferedReader br = new BufferedReader(new InputStreamReader(inputStream));
+            SimpleDateFormat sdf = new SimpleDateFormat("dd.mm.yyyy");
+            while (br.ready()) {
+                if (br.readLine().equals("@")) {
+                    User tmp = new User();
+                    String n = br.readLine();
+                    if (n)
+                    if (!n.equals("--")){tmp.setFirstName(n);}
+                    String l = br.readLine();if (!l.equals("--")){tmp.setLastName(l);}
+                    String b = br.readLine();
+                    if (!b.equals("--")){tmp.setBirthDate(sdf.parse(b));}
+                    String m = br.readLine();if (m.equals("true")){tmp.setMale(true);}
+                    String c = br.readLine();if (!c.equals("--")){tmp.setCountry(User.Country.valueOf(c));}
+                    this.users.add(tmp);
+                }
+            }
+            br.close();
         }
     }
 }
