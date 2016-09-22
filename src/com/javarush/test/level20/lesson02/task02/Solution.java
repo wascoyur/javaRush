@@ -4,6 +4,7 @@ import java.io.*;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 /* Читаем и пишем в файл: JavaRush
 Реализуйте логику записи в файл и чтения из файла для класса JavaRush
@@ -18,7 +19,7 @@ public class Solution {
             File your_file_name = File.createTempFile("your_file_name", null);
             OutputStream outputStream = new FileOutputStream("d:\\f1");
             InputStream inputStream = new FileInputStream("d:\\f1");
-            SimpleDateFormat date = new SimpleDateFormat("dd.mm.yyyy");
+            SimpleDateFormat date = new SimpleDateFormat("dd.mm.yyyy", Locale.ENGLISH);
             JavaRush javaRush = new JavaRush();
             //initialize users field for the javaRush object here - инициализируйте поле users для объекта javaRush тут
             User one = new User();
@@ -55,7 +56,7 @@ public class Solution {
         public void save(OutputStream outputStream) throws Exception {
             //implement this method - реализуйте этот метод
             PrintWriter pr = new PrintWriter(outputStream);
-            SimpleDateFormat sdf = new SimpleDateFormat("dd.mm.yyyy");
+            SimpleDateFormat sdf = new SimpleDateFormat("dd.mm.yyyy", Locale.ENGLISH);
             for (User x : users) {
                 pr.println("@");
                 if (x != null) {
@@ -68,14 +69,13 @@ public class Solution {
                 else {
                 pr.println("#");}
             }
-            pr.flush();
             pr.close();
         }
 
         public void load(InputStream inputStream) throws Exception {
             //implement this method - реализуйте этот метод
             BufferedReader br = new BufferedReader(new InputStreamReader(inputStream));
-            SimpleDateFormat sdf = new SimpleDateFormat("dd.mm.yyyy");
+            SimpleDateFormat sdf = new SimpleDateFormat("dd.mm.yyyy", Locale.ENGLISH);
             while (br.ready()) {
                 if (br.readLine().equals("@")) {
 
@@ -95,7 +95,7 @@ public class Solution {
                     }
                 }
             }
-            br.close();
+
         }
     }
 }
