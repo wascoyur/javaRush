@@ -78,7 +78,7 @@ public class Solution {
                 if (br.readLine().equals("@")) {
                     User tmp = new User();
                     String n = br.readLine();
-                    if (n)
+//                    if (n)
                     if (!n.equals("--")){tmp.setFirstName(n);}
                     String l = br.readLine();if (!l.equals("--")){tmp.setLastName(l);}
                     String b = br.readLine();
