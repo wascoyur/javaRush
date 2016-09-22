@@ -22,9 +22,10 @@ public class Solution {
             JavaRush javaRush = new JavaRush();
             //initialize users field for the javaRush object here - инициализируйте поле users для объекта javaRush тут
             User one = new User();
-            one.setFirstName("Ivan");one.setLastName("Ivanov");one.setBirthDate(date.parse("11.12.2000"));one.setMale(true); one.setCountry(User.Country.RUSSIA);
+            one.setFirstName("Ivan");one.setLastName("Ivanov");one.setBirthDate(null);one.setMale(true); one.setCountry(User.Country.RUSSIA);
             User two = new User();
             two.setFirstName("Peter");two.setLastName("Petrow");two.setBirthDate(date.parse("22.02.2002"));two.setMale(false); two.setCountry(User.Country.OTHER);
+            javaRush.users.add(null);
             javaRush.users.add(null);
             javaRush.users.add(one);
             javaRush.users.add(two);
@@ -64,7 +65,8 @@ public class Solution {
                     if (x.isMale()== true){pr.println("true");} else pr.println("--");
                     if (x.getCountry()!= null){pr.println(x.getCountry());}else {pr.println("--");}
                 }
-
+                else {
+                pr.println("#");}
             }
             pr.flush();
             pr.close();
@@ -76,16 +78,21 @@ public class Solution {
             SimpleDateFormat sdf = new SimpleDateFormat("dd.mm.yyyy");
             while (br.ready()) {
                 if (br.readLine().equals("@")) {
-                    User tmp = new User();
+
                     String n = br.readLine();
-                    if (n)
-                    if (!n.equals("--")){tmp.setFirstName(n);}
-                    String l = br.readLine();if (!l.equals("--")){tmp.setLastName(l);}
-                    String b = br.readLine();
-                    if (!b.equals("--")){tmp.setBirthDate(sdf.parse(b));}
-                    String m = br.readLine();if (m.equals("true")){tmp.setMale(true);}
-                    String c = br.readLine();if (!c.equals("--")){tmp.setCountry(User.Country.valueOf(c));}
-                    this.users.add(tmp);
+                    if (!n.equals("#")) {
+                        User tmp = new User();
+                        if (!n.equals("--")){tmp.setFirstName(n);}
+                        String l = br.readLine();if (!l.equals("--")){tmp.setLastName(l);}
+                        String b = br.readLine();
+                        if (!b.equals("--")){tmp.setBirthDate(sdf.parse(b));}
+                        String m = br.readLine();if (m.equals("true")){tmp.setMale(true);}
+                        String c = br.readLine();if (!c.equals("--")){tmp.setCountry(User.Country.valueOf(c));}
+                        this.users.add(tmp);
+                    }
+                    else {
+                        this.users.add(null);
+                    }
                 }
             }
             br.close();
