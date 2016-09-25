@@ -23,9 +23,26 @@ public class Solution {
     public static TestString testString = new TestString();
 
     public static void main(String[] args) {
+        String advertise = "JavaRush - курсы Java онлайн";
         PrintStream consolestream = System.out;
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-
+        PrintStream stream = new PrintStream(outputStream);
+        System.setOut(stream);
+        testString.printSomething();
+        System.setOut(consolestream);
+        String[] mass = (String.valueOf(outputStream)).split("\n");
+        StringBuilder inserter = new StringBuilder();
+        for (int i = 1; i <= mass.length; i++) {
+            inserter.append(mass[i -1]);
+            if(i % 2 == 0) {
+                inserter.append("\n");
+                inserter.append(advertise);
+                inserter.append("\n");
+            }
+            else {
+            inserter.append("\n");}
+        }
+        System.out.println(inserter.toString());
 
     }
 
